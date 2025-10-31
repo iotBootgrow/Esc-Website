@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E Scalability Commerce LLP - Leading E-commerce Growth Consultancy in India. Expert marketplace optimization, product sourcing, and international expansion for Amazon, Walmart, Flipkart & 20+ platforms.">
+    <meta name="keywords" content="ecommerce consultancy India, amazon seller consultant, walmart marketplace India, flipkart growth, product sourcing India, export to US, ecommerce SAAS, marketplace optimization, quick commerce, seller consultancy">
+    <meta name="author" content="E Scalability Commerce LLP">
+    <title>E Scalability Commerce LLP | E-commerce Growth Consultancy India</title>
+    
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --white: #ffffff;
+        }
+
+        /* ===== GLOBAL RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            padding: 1.2rem 5%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 5%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--dark);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 5% 4rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            color: white;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== TRUST BADGES ===== */
+        .trust-section {
+            background: white;
+            padding: 2rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .trust-badges {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--gray);
+            font-weight: 600;
+        }
+
+        .trust-badge span {
+            font-size: 2rem;
+        }
+
+        /* ===== MARKETPLACE SLIDER ===== */
+        .marketplace-section {
+            padding: 5rem 5%;
+            background: var(--light);
+            overflow: hidden;
+        }
+
+        .marketplace-section h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .slider-track {
+            display: flex;
+            animation: scroll 50s linear infinite;
+            width: fit-content;
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marketplace-logo {
+            flex: 0 0 220px;
+            height: 120px;
+            margin: 0 20px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .marketplace-logo:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .marketplace-logo svg {
+            width: 160px;
+            height: 70px;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 4rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* ===== MODAL STYLES ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 25px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: zoomIn 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 2rem;
+            border-radius: 25px 25px 0 0;
+            position: relative;
+        }
+
+        .modal-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: white;
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-body h3 {
+            color: var(--dark);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .modal-body ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-body li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .modal-body li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .modal-body p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== BLOG SECTION ===== */
+        .blog-section {
+            padding: 6rem 5%;
+            background: var(--light);
+        }
+
+        .blog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .blog-section h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 4rem;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .blog-card:hover .blog-image::after {
+            left: 100%;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-date {
+            display: inline-block;
+            color: white;
+            background: var(--primary);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+            color: var(--accent);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .about p {
+            color: var(--gray);
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--light);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            margin-top: 0.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 6rem 5%;
+            background: var(--light);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 4rem;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .testimonial-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .testimonial-text {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: pulse 10s ease-in-out infinite;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: white;
+            color: var(--primary);
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .social-links {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px) rotate(10deg);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                justify-content: center;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid,
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">E Scalability</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Scale Your E-commerce Empire</h1>
+            <p>From zero to hero across Amazon, Walmart, Flipkart & 20+ marketplaces. Expert strategies for marketplace dominance, buybox wins & commission optimization.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">Start Your Growth Journey</a>
+                <a href="#services" class="cta-button secondary">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="trust-section">
+        <div class="trust-badges">
+            <div class="trust-badge"><span>⭐</span><div>5+ Years Experience</div></div>
+            <div class="trust-badge"><span>🏆</span><div>100+ Happy Clients</div></div>
+            <div class="trust-badge"><span>🌍</span><div>3 Countries Covered</div></div>
+            <div class="trust-badge"><span>📊</span><div>20+ Marketplaces</div></div>
+        </div>
+    </section>
+
+    <!-- MARKETPLACE SLIDER -->
+    <section class="marketplace-section">
+        <h2>Trusted Across Leading Marketplaces</h2>
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack"></div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <h2>Comprehensive E-commerce Solutions</h2>
+        <div class="service-grid">
+            <div class="service-card" data-service="amazon">
+                <div class="service-icon">📦</div>
+                <h3>Amazon Marketplace</h3>
+                <p>Complete Amazon optimization from listing to advertising. Win the buybox, dominate search rankings.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="walmart">
+                <div class="service-icon">🛒</div>
+                <h3>Walmart Marketplace</h3>
+                <p>Navigate Walmart's Spec 5.0 requirements. Expert attribute optimization for maximum visibility.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="tiktok">
+                <div class="service-icon">🎵</div>
+                <h3>TikTok Shop</h3>
+                <p>Leverage viral content and TikTok's algorithm. Turn massive audiences into loyal customers.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="sourcing">
+                <div class="service-icon">🌏</div>
+                <h3>Product Sourcing</h3>
+                <p>Connect with verified Indian suppliers. Quality control, MOQ negotiation, and partnership building.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="account">
+                <div class="service-icon">🎯</div>
+                <h3>Account Management</h3>
+                <p>End-to-end marketplace account handling. From setup to compliance, violation-free operations.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="shopify">
+                <div class="service-icon">💻</div>
+                <h3>Shopify Development</h3>
+                <p>Build stunning, high-converting stores. SEO optimization and revenue-generating platforms.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="commission">
+                <div class="service-icon">💰</div>
+                <h3>Commission Optimization</h3>
+                <p>Strategic pricing to minimize marketplace fees. Maximize profit margins without losing competitiveness.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="buybox">
+                <div class="service-icon">🏆</div>
+                <h3>Buybox Strategy</h3>
+                <p>Win and maintain the coveted buybox. Data-driven strategies for consistent buybox ownership.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-service="competition">
+                <div class="service-icon">⚔️</div>
+                <h3>Competitor Analysis</h3>
+                <p>Beat your competition with real-time monitoring. Price tracking, keyword gaps, and market intelligence.</p>
+                <a class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE MODALS -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- BLOG -->
+    <section class="blog-section" id="blog">
+        <div class="blog-container">
+            <h2>Latest Insights & Guides</h2>
+            <div class="blog-grid">
+                <article class="blog-card" data-blog="export-us">
+                    <div class="blog-image">🌏</div>
+                    <div class="blog-content">
+                        <span class="blog-date">October 25, 2025</span>
+                        <h3>How to Start E-commerce in India and Export to the US</h3>
+                        <p class="blog-excerpt">Breaking into US markets from India seems daunting, but it's more accessible than ever. Learn the complete roadmap.</p>
+                        <a class="read-more">Read Full Guide →</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-blog="sourcing">
+                    <div class="blog-image">📦</div>
+                    <div class="blog-content">
+                        <span class="blog-date">October 20, 2025</span>
+                        <h3>Is Product Sourcing Tough in 2025?</h3>
+                        <p class="blog-excerpt">The sourcing landscape has evolved. Discover modern strategies that actually work for Indian sellers.</p>
+                        <a class="read-more">Read Full Guide →</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-blog="logistics">
+                    <div class="blog-image">🚚</div>
+                    <div class="blog-content">
+                        <span class="blog-date">October 15, 2025</span>
+                        <h3>Easy Logistics: Is It Really a Myth?</h3>
+                        <p class="blog-excerpt">Explore the real challenges of Indian logistics and solutions that work at scale.</p>
+                        <a class="read-more">Read Full Guide →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG MODAL -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="blogModalTitle"></h2>
+                <button class="modal-close" onclick="closeBlogModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="blogModalBody"></div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div>
+                <h2>About E Scalability Commerce LLP</h2>
+                <p>Founded with a mission to democratize e-commerce success, we've spent over 5 years helping businesses navigate complex marketplace ecosystems.</p>
+                <p>We don't just provide consultancy—we partner with you. From finding the right Indian suppliers to dominating international marketplaces, we handle every aspect of your e-commerce journey.</p>
+                <p><strong>Our Expertise:</strong> Marketplace optimization, buybox strategies, commission reduction, competitor analysis, SAAS platforms, and international expansion across Indian, US, and UK markets.</p>
+                <p><em>"We transform marketplace challenges into revenue opportunities."</em></p>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Marketplaces</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"E Scalability transformed our marketplace presence. Their strategic approach helped us achieve remarkable growth in just months."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SL</div>
+                    <div class="author-info">
+                        <h4>Sarah L.</h4>
+                        <p>Founder, EcoTrend</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Their expertise in e-commerce marketing is unparalleled. Our products are now bestsellers on multiple platforms!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JP</div>
+                    <div class="author-info">
+                        <h4>James P.</h4>
+                        <p>Owner, TechSavvy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"From Walmart to TikTok, they helped us establish a strong presence everywhere. Their execution is flawless."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SB</div>
+                    <div class="author-info">
+                        <h4>Stephanie Baxter</h4>
+                        <p>Founder, ComfyWear</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Managing multiple accounts was overwhelming until they stepped in. Their expertise streamlined everything and boosted our sales."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">KJ</div>
+                    <div class="author-info">
+                        <h4>Kevin Jr.</h4>
+                        <p>Owner, Indoor Outdoor LLC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Ready to Scale Your Business?</h2>
+            <p>Let's discuss how we can accelerate your e-commerce growth</p>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Your Name *" required>
+                <input type="email" placeholder="Email Address *" required>
+                <input type="tel" placeholder="Phone Number *" required>
+                <textarea placeholder="Tell us about your business and goals *" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#" class="social-link" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" title="Twitter">🐦</a>
+                <a href="#" class="social-link" title="WhatsApp">💬</a>
+                <a href="mailto:contact@e-scalability.com" class="social-link" title="Email">📧</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>E Scalability Commerce LLP</h3>
+                <p>Your partner in e-commerce growth across Indian, US, and UK marketplaces.</p>
+                <p style="margin-top: 1rem;"><strong>e-scalability.com</strong></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Amazon Optimization</a></li>
+                    <li><a href="#services">Walmart Marketplace</a></li>
+                    <li><a href="#services">Product Sourcing</a></li>
+                    <li><a href="#services">Buybox Strategy</a></li>
+                    <li><a href="#services">Commission Optimization</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: contact@e-scalability.com</li>
+                    <li>Phone: +91 XXX XXX XXXX</li>
+                    <li>Location: India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 E Scalability Commerce LLP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <script>
+        // ===== SERVICE DATA =====
+        const serviceData = {
+            amazon: {
+                title: 'Amazon Marketplace Mastery',
+                content: `
+                    <p>Selling on Amazon comes with fierce competition and ever-evolving algorithms. We take the guesswork out of your Amazon journey with expert optimization and data-driven strategies.</p>
+                    
+                    <h3>What We Do:</h3>
+                    <ul>
+                        <li>Product listing optimization with keyword-rich titles, bullets, and descriptions</li>
+                        <li>Enhanced Brand Content (EBC) and A+ Content creation</li>
+                        <li>Amazon PPC campaign management (Sponsored Products, Brands, Display)</li>
+                        <li>Brand Registry setup and IP protection</li>
+                        <li>Inventory management and FBA optimization</li>
+                        <li>Review and rating management strategies</li>
+                        <li>Algorithm compliance and policy adherence</li>
+                        <li>Sales analytics and performance tracking</li>
+                    </ul>
+
+                    <h3>Why Choose Us:</h3>
+                    <ul>
+                        <li>Proven track record of increasing organic rankings by 300%+</li>
+                        <li>Expert knowledge of Amazon's A9/A10 algorithm</li>
+                        <li>Reduce ACoS while scaling sales</li>
+                        <li>Complete buybox optimization strategies</li>
+                    </ul>
+                `
+            },
+            walmart: {
+                title: 'Walmart Marketplace Excellence',
+                content: `
+                    <p>Navigating Walmart's Spec 5.0 requirements can be challenging, especially with attributes now playing a major role in product visibility. We optimize your products for maximum quality and reach.</p>
+                    
+                    <h3>Our Walmart Services:</h3>
+                    <ul>
+                        <li>Spec 5.0 compliance and attribute optimization</li>
+                        <li>Product catalog setup with rich media</li>
+                        <li>Walmart Connect advertising campaigns</li>
+                        <li>Brand setup and trademark registration assistance</li>
+                        <li>Inventory sync and fulfillment optimization</li>
+                        <li>Competitive pricing strategies</li>
+                        <li>Performance dashboard monitoring</li>
+                        <li>Issue resolution and account health management</li>
+                    </ul>
+
+                    <h3>Success Metrics:</h3>
+                    <ul>
+                        <li>Helped 15+ clients scale on Walmart Marketplace</li>
+                        <li>Average visibility improvement of 250%</li>
+                        <li>Expert handling of WFS (Walmart Fulfillment Services)</li>
+                        <li>Strategic growth from onboarding to profitability</li>
+                    </ul>
+                `
+            },
+            tiktok: {
+                title: 'TikTok Shop Strategy',
+                content: `
+                    <p>TikTok Shop is revolutionizing how brands connect with audiences through engaging, viral content. We help you tap into this dynamic platform and turn views into sales.</p>
+                    
+                    <h3>TikTok Shop Services:</h3>
+                    <ul>
+                        <li>Shop setup and product catalog optimization</li>
+                        <li>Viral content strategy development</li>
+                        <li>TikTok algorithm leveraging for maximum reach</li>
+                        <li>Influencer partnership coordination</li>
+                        <li>TikTok Ads campaign management</li>
+                        <li>Live shopping event planning</li>
+                        <li>Trend analysis and content calendar creation</li>
+                        <li>Conversion optimization for Gen Z audiences</li>
+                    </ul>
+
+                    <h3>Why TikTok Shop:</h3>
+                    <ul>
+                        <li>Access to 1+ billion active users</li>
+                        <li>Higher engagement rates than traditional platforms</li>
+                        <li>Perfect for product discovery and impulse purchases</li>
+                        <li>Viral potential can 10x your reach overnight</li>
+                    </ul>
+                `
+            },
+            sourcing: {
+                title: 'Product Sourcing Excellence',
+                content: `
+                    <p>Connect with verified Indian domestic suppliers for reliable, quality products at competitive prices. We handle everything from discovery to partnership building.</p>
+                    
+                    <h3>Sourcing Services:</h3>
+                    <ul>
+                        <li>Supplier discovery and vetting across India</li>
+                        <li>Factory visits and quality audits</li>
+                        <li>MOQ (Minimum Order Quantity) negotiations</li>
+                        <li>Sample procurement and testing</li>
+                        <li>Payment terms negotiation</li>
+                        <li>Quality control and inspection protocols</li>
+                        <li>Long-term supplier relationship management</li>
+                        <li>Alternative supplier identification for risk mitigation</li>
+                    </ul>
+
+                    <h3>Sourcing Advantages:</h3>
+                    <ul>
+                        <li>Access to India's manufacturing advantage</li>
+                        <li>Cost savings of 30-60% vs international sourcing</li>
+                        <li>Verified supplier network across multiple industries</li>
+                        <li>Sustainable and ethical sourcing options</li>
+                    </ul>
+                `
+            },
+            account: {
+                title: 'Dedicated Account Management',
+                content: `
+                    <p>Navigating marketplace accounts can be overwhelming. We manage every step—from application to approval, compliance to growth—so you can focus on your business.</p>
+                    
+                    <h3>Account Management Services:</h3>
+                    <ul>
+                        <li>Marketplace account application and approval assistance</li>
+                        <li>Complete profile setup and optimization</li>
+                        <li>Product listing and catalog management</li>
+                        <li>Compliance checks and policy adherence</li>
+                        <li>Brand approval and trademark registration</li>
+                        <li>IP case handling and dispute resolution</li>
+                        <li>Account health monitoring and violation prevention</li>
+                        <li>Performance metrics tracking and reporting</li>
+                    </ul>
+
+                    <h3>Why Full Management:</h3>
+                    <ul>
+                        <li>Stay violation-free with proactive monitoring</li>
+                        <li>Maximize account potential with expert optimization</li>
+                        <li>Handle complex issues with dedicated support</li>
+                        <li>Scale faster without operational headaches</li>
+                    </ul>
+                `
+            },
+            shopify: {
+                title: 'Shopify Store Development',
+                content: `
+                    <p>Build visually stunning, high-converting Shopify stores optimized for sales and performance. Whether launching new or upgrading existing stores, we create revenue-generating platforms.</p>
+                    
+                    <h3>Shopify Services:</h3>
+                    <ul>
+                        <li>Custom theme development and design</li>
+                        <li>Mobile-responsive store optimization</li>
+                        <li>SEO optimization for higher rankings</li>
+                        <li>App integration (payments, shipping, marketing)</li>
+                        <li>Product catalog setup and organization</li>
+                        <li>Checkout optimization for higher conversions</li>
+                        <li>Performance optimization (speed, loading times)</li>
+                        <li>Brand identity and user experience design</li>
+                    </ul>
+
+                    <h3>Store Features:</h3>
+                    <ul>
+                        <li>Seamless navigation and user-friendly interface</li>
+                        <li>High-converting landing pages</li>
+                        <li>Integrated marketing tools and analytics</li>
+                        <li>Multi-currency and international shipping support</li>
+                    </ul>
+                `
+            },
+            commission: {
+                title: 'Commission Optimization Strategies',
+                content: `
+                    <p>Marketplace fees can eat into your profits significantly. We develop strategic pricing and operational models to minimize commission impact while staying competitive.</p>
+                    
+                    <h3>Commission Reduction Tactics:</h3>
+                    <ul>
+                        <li>Strategic pricing models that account for marketplace fees</li>
+                        <li>Bundle optimization to maximize per-order value</li>
+                        <li>Fulfillment method selection (FBA vs FBM vs Hybrid)</li>
+                        <li>Category selection for lower commission rates</li>
+                        <li>Volume-based fee negotiation strategies</li>
+                        <li>Profit margin analysis and optimization</li>
+                        <li>Multi-marketplace arbitrage opportunities</li>
+                        <li>Cost structure optimization across the supply chain</li>
+                    </ul>
+
+                    <h3>Results We Deliver:</h3>
+                    <ul>
+                        <li>Reduce effective commission rates by 15-30%</li>
+                        <li>Improve profit margins without price increases</li>
+                        <li>Maintain competitiveness while maximizing profitability</li>
+                        <li>Data-driven decisions for long-term sustainability</li>
+                    </ul>
+                `
+            },
+            buybox: {
+                title: 'Buybox Winning Strategy',
+                content: `
+                    <p>The buybox drives 80%+ of sales on major marketplaces. We implement data-driven strategies to win and maintain buybox ownership consistently.</p>
+                    
+                    <h3>Buybox Optimization:</h3>
+                    <ul>
+                        <li>Competitive pricing analysis and dynamic repricing</li>
+                        <li>Inventory management for consistent availability</li>
+                        <li>Fulfillment method optimization (Prime eligibility)</li>
+                        <li>Seller metrics improvement (ODR, cancellation rate, delivery time)</li>
+                        <li>Product condition and listing quality enhancement</li>
+                        <li>Order defect rate minimization strategies</li>
+                        <li>Customer service excellence for high ratings</li>
+                        <li>Real-time monitoring and automated adjustments</li>
+                    </ul>
+
+                    <h3>Buybox Impact:</h3>
+                    <ul>
+                        <li>Increase sales by 300-500% with buybox ownership</li>
+                        <li>Maintain competitive edge without race-to-bottom pricing</li>
+                        <li>Algorithmic favorability for long-term success</li>
+                        <li>Protect against competitor price wars</li>
+                    </ul>
+                `
+            },
+            competition: {
+                title: 'Competitor Intelligence & Analysis',
+                content: `
+                    <p>Beat your competition with real-time monitoring, market intelligence, and strategic insights. We track competitors so you can stay ahead.</p>
+                    
+                    <h3>Competitive Analysis Services:</h3>
+                    <ul>
+                        <li>Real-time price tracking and alerts</li>
+                        <li>Keyword gap analysis and opportunities</li>
+                        <li>Product review analysis and sentiment tracking</li>
+                        <li>Advertising strategy reconnaissance</li>
+                        <li>Inventory level monitoring</li>
+                        <li>Market share analysis by category</li>
+                        <li>Listing optimization benchmarking</li>
+                        <li>New entrant and threat identification</li>
+                    </ul>
+
+                    <h3>Strategic Advantages:</h3>
+                    <ul>
+                        <li>Identify untapped keyword opportunities</li>
+                        <li>React quickly to competitor price changes</li>
+                        <li>Discover product gaps in the market</li>
+                        <li>Optimize advertising spend vs competitors</li>
+                    </ul>
+                `
+            }
+        };
+
+        // ===== BLOG DATA =====
+        const blogData = {
+            'export-us': {
+                title: 'How to Start E-commerce in India and Export to the US',
+                content: `
+                    <p>Breaking into US markets from India might seem daunting, but with the right strategy and partners, it's more accessible than ever. This comprehensive guide covers everything you need to know.</p>
+
+                    <h3>1. Product Selection for US Markets</h3>
+                    <ul>
+                        <li>Research high-demand, low-competition niches using tools like Jungle Scout</li>
+                        <li>Validate product-market fit with US consumer preferences</li>
+                        <li>Consider shipping costs, dimensions, and customs classifications</li>
+                        <li>Ensure products comply with US safety standards (FDA, FCC, CPSC)</li>
+                        <li>Analyze profit margins after accounting for all costs and fees</li>
+                    </ul>
+
+                    <h3>2. Legal & Compliance Requirements</h3>
+                    <ul>
+                        <li>Register your Indian business entity (LLP, Pvt Ltd recommended)</li>
+                        <li>Obtain IEC (Import Export Code) from DGFT</li>
+                        <li>Understand FDA regulations for food, cosmetics, medical devices</li>
+                        <li>FCC compliance for electronics and radio frequency devices</li>
+                        <li>Product liability insurance for US sales</li>
+                        <li>Trademark registration in the US (highly recommended)</li>
+                    </ul>
+
+                    <h3>3. Shipping & Logistics Solutions</h3>
+                    <ul>
+                        <li><strong>DDP (Delivered Duty Paid):</strong> You handle customs, easier for customers</li>
+                        <li><strong>DDU (Delivered Duty Unpaid):</strong> Customer pays customs, lower upfront cost</li>
+                        <li>Amazon FBA USA: Ship inventory in bulk, Amazon handles fulfillment</li>
+                        <li>3PL partners in the US for storage and distribution</li>
+                        <li>Direct shipping via DHL, FedEx for smaller volumes</li>
+                        <li>Consider freight forwarders for cost-effective bulk shipping</li>
+                    </ul>
+
+                    <h3>4. Marketplace Selection</h3>
+                    <ul>
+                        <li><strong>Amazon.com:</strong> Largest reach, competitive, requires FBA for Prime</li>
+                        <li><strong>Walmart.com:</strong> Growing fast, less competition, strict quality standards</li>
+                        <li><strong>eBay:</strong> Good for testing products, auction + fixed price options</li>
+                        <li><strong>Etsy:</strong> Perfect for handmade, vintage, unique Indian products</li>
+                        <li><strong>TikTok Shop:</strong> Emerging platform, viral potential, younger demographics</li>
+                    </ul>
+
+                    <h3>5. Payment Gateway Setup</h3>
+                    <ul>
+                        <li>Payoneer: Popular for international sellers, receive marketplace payments</li>
+                        <li>Wise (formerly TransferWise): Low fees for currency conversion</li>
+                        <li>Indian bank accounts with SWIFT capabilities</li>
+                        <li>Consider US LLC formation for easier payment processing</li>
+                    </ul>
+
+                    <h3>6. Pricing Strategy</h3>
+                    <ul>
+                        <li>Calculate all costs: product, shipping, customs, marketplace fees (15-20%)</li>
+                        <li>Research competitor pricing on target marketplaces</li>
+                        <li>Factor in currency fluctuations (INR to USD)</li>
+                        <li>Account for returns and refunds (typically 5-10% of sales)</li>
+                        <li>Aim for 30-40% profit margin minimum</li>
+                    </ul>
+
+                    <h3>7. Marketing for US Customers</h3>
+                    <ul>
+                        <li>Optimize product listings for US search terms and language</li>
+                        <li>Professional product photography with lifestyle images</li>
+                        <li>Emphasize "Made in India" as a unique selling point</li>
+                        <li>Run PPC campaigns targeting US time zones</li>
+                        <li>Leverage social proof: reviews, testimonials, influencer partnerships</li>
+                    </ul>
+
+                    <h3>8. Common Pitfalls to Avoid</h3>
+                    <ul>
+                        <li>Underestimating shipping times (promise 2-3 weeks, deliver in 1)</li>
+                        <li>Ignoring US customer service expectations (fast responses required)</li>
+                        <li>Not testing products before bulk ordering</li>
+                        <li>Failing to protect intellectual property in the US</li>
+                    </ul>
+
+                    <p><strong>Bottom Line:</strong> Success in US markets requires patience, compliance, and local understanding. Partner with experts who know both Indian sourcing and US marketplace dynamics.</p>
+                `
+            },
+            sourcing: {
+                title: 'Is Product Sourcing Tough in 2025?',
+                content: `
+                    <p>The sourcing landscape has evolved dramatically. While platforms like IndiaMART and TradeIndia have made supplier discovery easier, quality verification and relationship building remain challenging.</p>
+
+                    <h3>The Modern Sourcing Reality</h3>
+                    <ul>
+                        <li><strong>Information Overload:</strong> Thousands of suppliers, but which are reliable?</li>
+                        <li><strong>Quality Variance:</strong> Samples are perfect, bulk orders disappoint</li>
+                        <li><strong>MOQ Challenges:</strong> Minimum order quantities too high for testing</li>
+                        <li><strong>Communication Gaps:</strong> Misunderstandings lead to wrong products</li>
+                        <li><strong>Payment Risks:</strong> Advance payments without guarantees</li>
+                    </ul>
+
+                    <h3>Smart Sourcing Strategies for 2025</h3>
+                    <ul>
+                        <li><strong>Start Small:</strong> Negotiate sample + small batch before committing</li>
+                        <li><strong>Factory Visits:</strong> Essential for high-value partnerships (virtual tours work too)</li>
+                        <li><strong>Multiple Quotes:</strong> Get 5-7 quotes, compare not just price but capabilities</li>
+                        <li><strong>Quality Protocols:</strong> Define specifications in writing, use inspection services</li>
+                        <li><strong>Payment Terms:</strong> 30% advance, 70% on delivery after inspection</li>
+                        <li><strong>Backup Suppliers:</strong> Always have 2-3 alternatives to avoid stockouts</li>
+                    </ul>
+
+                    <h3>Red Flags to Watch For</h3>
+                    <ul>
+                        <li>Supplier refuses factory visit or video call</li>
+                        <li>Demands 100% payment upfront</li>
+                        <li>No company registration documents or GST number</li>
+                        <li>Generic product photos (likely a middleman)</li>
+                        <li>Unwilling to provide references or past client contacts</li>
+                        <li>Price is 50%+ lower than market average (too good to be true)</li>
+                    </ul>
+
+                    <h3>Best Sourcing Platforms in India</h3>
+                    <ul>
+                        <li><strong>IndiaMART:</strong> Largest B2B marketplace, verify "TrustSEAL" badges</li>
+                        <li><strong>TradeIndia:</strong> Good for exports, strong verification process</li>
+                        <li><strong>ExportersIndia:</strong> Focus on export-ready manufacturers</li>
+                        <li><strong>Made-in-India:</strong> Government-backed supplier directory</li>
+                        <li><strong>Alibaba India:</strong> International standards, higher quality suppliers</li>
+                    </ul>
+
+                    <h3>Building Long-Term Supplier Relationships</h3>
+                    <ul>
+                        <li>Pay on time, every time—builds trust and gets priority treatment</li>
+                        <li>Provide feedback constructively to improve quality</li>
+                        <li>Share your growth plans so they can scale with you</li>
+                        <li>Visit suppliers during festivals (relationship building)</li>
+                        <li>Negotiate volume discounts as orders increase</li>
+                        <li>Consider exclusive arrangements for unique products</li>
+                    </ul>
+
+                    <h3>Quality Control Checklist</h3>
+                    <ul>
+                        <li>Pre-production samples approved before bulk manufacturing</li>
+                        <li>During-production inspection (DUPRO) at 50% completion</li>
+                        <li>Pre-shipment inspection (PSI) before dispatch</li>
+                        <li>Use third-party inspection services (SGS, Bureau Veritas, etc.)</li>
+                        <li>Define acceptance criteria: dimensions, materials, functionality</li>
+                        <li>Document everything with photos and reports</li>
+                    </ul>
+
+                    <p><strong>Conclusion:</strong> Sourcing isn't tough if you follow proven processes. The key is patience, due diligence, and building relationships beyond just transactions.</p>
+                `
+            },
+            logistics: {
+                title: 'Easy Logistics: Is It Really a Myth?',
+                content: `
+                    <p>"Easy logistics" is one of the biggest misconceptions in e-commerce. The reality involves complex coordination between warehousing, delivery, returns, and customer expectations.</p>
+
+                    <h3>The Logistics Challenge in India</h3>
+                    <ul>
+                        <li><strong>Last-Mile Complexity:</strong> Reaching tier-2 and tier-3 cities</li>
+                        <li><strong>Address Accuracy:</strong> Incomplete or wrong addresses cause 30% delivery failures</li>
+                        <li><strong>Cash on Delivery:</strong> 70% prefer COD, increasing complexity and fraud</li>
+                        <li><strong>Returns Management:</strong> 15-25% return rates in fashion/electronics</li>
+                        <li><strong>Peak Season Chaos:</strong> Diwali, Republic Day sales overwhelm systems</li>
+                        <li><strong>Cost Pressures:</strong> Free/low-cost shipping expected by customers</li>
+                    </ul>
+
+                    <h3>3PL vs In-House: The Real Comparison</h3>
+                    <p><strong>Third-Party Logistics (3PL):</strong></p>
+                    <ul>
+                        <li><em>Pros:</em> No upfront investment, scalable, multi-city presence, tech-enabled</li>
+                        <li><em>Cons:</em> Per-order costs higher, less control, shared resources during peak</li>
+                        <li><em>Best For:</em> Startups, seasonal businesses, rapid scaling</li>
+                        <li><em>Top Partners:</em> Delhivery, Ecom Express, Xpressbees, Shiprocket</li>
+                    </ul>
+
+                    <p><strong>In-House Logistics:</strong></p>
+                    <ul>
+                        <li><em>Pros:</em> Complete control, better margins at scale, brand experience</li>
+                        <li><em>Cons:</em> High capital investment, complex operations, limited reach</li>
+                        <li><em>Best For:</em> High-volume sellers (1000+ orders/day), premium brands</li>
+                        <li><em>Break-even:</em> Usually at 50,000+ orders/month</li>
+                    </ul>
+
+                    <h3>Hidden Logistics Costs</h3>
+                    <ul>
+                        <li>Weight disputes and dimensional weight charges</li>
+                        <li>RTO (Return to Origin) charges: 2x shipping cost</li>
+                        <li>COD charges: ₹15-30 per order</li>
+                        <li>Fuel surcharges during price hikes</li>
+                        <li>Failed delivery attempts</li>
+                        <li>Packaging materials and quality</li>
+                        <li>Insurance for high-value items</li>
+                        <li>Storage fees for unsold inventory</li>
+                    </ul>
+
+                    <h3>Solutions That Actually Work</h3>
+                    <ul>
+                        <li><strong>Multi-Carrier Strategy:</strong> Use 2-3 partners, route based on pin codes</li>
+                        <li><strong>Address Verification:</strong> Call customers before dispatch to confirm</li>
+                        <li><strong>Reduce COD:</strong> Offer prepaid discounts (10% off works)</li>
+                        <li><strong>Strategic Warehousing:</strong> Place inventory near demand centers</li>
+                        <li><strong>Smart Packaging:</strong> Right-size boxes to avoid dimensional weight penalties</li>
+                        <li><strong>Predictive Analytics:</strong> Forecast demand to pre-position inventory</li>
+                        <li><strong>Quality Control:</strong> Reduce returns through better QC</li>
+                    </ul>
+
+                    <h3>Quick Commerce (10-15 min delivery)</h3>
+                    <ul>
+                        <li>Requires dark stores in every micro-market</li>
+                        <li>Works for groceries, medicines, not most products</li>
+                        <li>Extremely expensive to operate (₹150-200 per order cost)</li>
+                        <li>Only viable with high order density and frequency</li>
+                        <li><em>Reality:</em> Most sellers should aim for same-day or next-day, not 10-min</li>
+                    </ul>
+
+                    <h3>Marketplace-Specific Fulfillment</h3>
+                    <ul>
+                        <li><strong>Amazon FBA:</strong> Great reach, Prime badge, but 20-30% fees</li>
+                        <li><strong>Flipkart F-Assured:</strong> Similar to FBA, required for visibility</li>
+                        <li><strong>Meesho:</strong> Supports drop-shipping, lower logistics burden</li>
+                        <li><strong>Quick Commerce:</strong> Blinkit/Zepto have their own dark stores</li>
+                    </ul>
+
+                    <h3>Technology for Logistics Excellence</h3>
+                    <ul>
+                        <li>Order Management System (OMS) to sync multi-channel orders</li>
+                        <li>Warehouse Management System (WMS) for inventory tracking</li>
+                        <li>Shipping aggregators (Shiprocket, Shipway) for multi-carrier access</li>
+                        <li>Real-time tracking and customer notifications</li>
+                        <li>Returns management portals</li>
+                        <li>Analytics for route optimization and carrier performance</li>
+                    </ul>
+
+                    <h3>The Bottom Line</h3>
+                    <p>Logistics is never "easy," but it's manageable with the right strategy:</p>
+                    <ul>
+                        <li>Start with 3PL, build scale, then consider in-house</li>
+                        <li>Focus on reducing returns and RTO rates</li>
+                        <li>Use technology to automate and optimize</li>
+                        <li>Build relationships with logistics partners</li>
+                        <li>Set realistic delivery promises and exceed them</li>
+                    </ul>
+
+                    <p><strong>Remember:</strong> Great logistics is invisible to customers—they just expect their orders to arrive on time. That's where expert partners make the difference.</p>
+                `
+            }
+        };
+
+        // ===== MOBILE MENU =====
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== NAVBAR SCROLL =====
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const scrollTop = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // ===== MARKETPLACE LOGOS =====
+        const marketplaces = [
+            { name: 'Amazon', color: '#FF9900' },
+            { name: 'Walmart', color: '#0071CE' },
+            { name: 'Flipkart', color: '#2874F0' },
+            { name: 'Meesho', color: '#9F2089' },
+            { name: 'Blinkit', color: '#F8CB46' },
+            { name: 'Zepto', color: '#8B4EE8' },
+            { name: 'Instamart', color: '#E23744' },
+            { name: 'Myntra', color: '#EE5F73' },
+            { name: 'Ajio', color: '#C4181C' },
+            { name: 'Nykaa', color: '#FC2779' },
+            { name: 'BigBasket', color: '#84C225' },
+            { name: 'JioMart', color: '#0A2885' },
+            { name: 'Snapdeal', color: '#E40046' },
+            { name: 'Shopsy', color: '#FF6B00' },
+            { name: 'eBay', color: '#E53238' },
+            { name: 'Etsy', color: '#F56400' },
+            { name: 'Shein', color: '#000000' },
+            { name: 'TikTok Shop', color: '#FF0050' },
+            { name: 'Amazon US', color: '#FF9900' },
+            { name: 'Amazon UK', color: '#FF9900' }
+        ];
+
+        function createLogo(marketplace) {
+            const logo = document.createElement('div');
+            logo.className = 'marketplace-logo';
+            logo.innerHTML = `
+                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="50" text-anchor="middle" fill="${marketplace.color}" 
+                          font-size="22" font-weight="bold" font-family="Arial, sans-serif">
+                        ${marketplace.name}
+                    </text>
+                </svg>
+            `;
+            return logo;
+        }
+
+        // Initialize slider
+        const sliderTrack = document.getElementById('sliderTrack');
+        if (sliderTrack) {
+            // Create two sets for infinite loop
+            for (let i = 0; i < 2; i++) {
+                marketplaces.forEach(marketplace => {
+                    sliderTrack.appendChild(createLogo(marketplace));
+                });
+            }
+        }
+
+        // ===== SERVICE MODALS =====
+        function openServiceModal(service) {
+            const modal = document.getElementById('serviceModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            const data = serviceData[service];
+            if (data) {
+                title.textContent = data.title;
+                body.innerHTML = data.content;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('serviceModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Service card click handlers
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const service = card.getAttribute('data-service');
+                openServiceModal(service);
+            });
+        });
+
+        // Close modal on outside click
+        document.getElementById('serviceModal').addEventListener('click', (e) => {
+            if (e.target.id === 'serviceModal') {
+                closeModal();
+            }
+        });
+
+        // ===== BLOG MODALS =====
+        function openBlogModal(blogId) {
+            const modal = document.getElementById('blogModal');
+            const title = document.getElementById('blogModalTitle');
+            const body = document.getElementById('blogModalBody');
+            
+            const data = blogData[blogId];
+            if (data) {
+                title.textContent = data.title;
+                body.innerHTML = data.content;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBlogModal() {
+            const modal = document.getElementById('blogModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Blog card click handlers
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const blogId = card.getAttribute('data-blog');
+                openBlogModal(blogId);
+            });
+        });
+
+        // Close modal on outside click
+        document.getElementById('blogModal').addEventListener('click', (e) => {
+            if (e.target.id === 'blogModal') {
+                closeBlogModal();
+            }
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                closeBlogModal();
+            }
+        });
+
+        // ===== CONTACT FORM =====
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('🎉 Thank you for reaching out! We will get back to you within 24 hours.');
+            e.target.reset();
+        });
+
+        // ===== SCROLL TO TOP =====
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
