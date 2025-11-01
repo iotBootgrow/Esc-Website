@@ -142,9 +142,9 @@
         .bfcm-popup-content {
             background: white;
             border-radius: 30px;
-            max-width: 650px;
-            width: 100%;
-            max-height: 85vh;
+            max-width: 900px;
+            width: 95%;
+            max-height: 90vh;
             overflow-y: auto;
             position: relative;
             animation: popupZoom 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -164,7 +164,7 @@
 
         .bfcm-popup-header {
             background: linear-gradient(135deg, #FF6B6B 0%, #D63031 100%);
-            padding: 2rem 2rem 4rem;
+            padding: 1.5rem 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -237,9 +237,15 @@
         .bfcm-popup-body {
             padding: 1.5rem;
             background: white;
-            margin-top: -2rem;
             position: relative;
             z-index: 5;
+        }
+
+        .bfcm-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
         }
 
         .bfcm-offer-card {
@@ -428,18 +434,46 @@
         /* Adjust nav for banner */
         nav {
             top: 60px;
+            z-index: 1002;
         }
 
         .hero {
             padding-top: 10rem;
         }
 
+        @media (max-width: 968px) {
+            nav {
+                top: 70px;
+            }
+        }
+
         /* Mobile responsiveness for BFCM */
+        @media (max-width: 968px) {
+            .bfcm-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .bfcm-banner {
+                padding: 0.6rem 1rem;
+            }
+
+            .bfcm-text {
+                font-size: 0.85rem;
+            }
+
+            .bfcm-cta {
+                font-size: 0.85rem;
+                padding: 0.3rem 0.8rem;
+            }
+        }
+
         @media (max-width: 640px) {
             .bfcm-popup-content {
-                max-height: 90vh;
+                max-height: 95vh;
                 border-radius: 20px;
                 margin: 0.5rem;
+                width: calc(100% - 1rem);
             }
 
             .bfcm-popup-header h2 {
@@ -447,11 +481,16 @@
             }
 
             .bfcm-popup-header {
-                padding: 1.5rem 1rem 3rem;
+                padding: 1.2rem 1rem;
             }
 
             .bfcm-popup-body {
                 padding: 1rem;
+            }
+
+            .bfcm-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
 
             .bfcm-discount-badge {
@@ -475,6 +514,34 @@
             .bfcm-btn {
                 min-width: 100%;
                 font-size: 0.9rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .bfcm-action-buttons {
+                flex-direction: column;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .marketplace-logo {
+                flex: 0 0 180px;
+                height: 100px;
+            }
+
+            .hero {
+                padding-top: 9rem;
+            }
+
+            nav {
+                top: 60px;
+            }
+
+            .bfcm-banner {
+                position: fixed;
+                top: 0;
             }
         }
 
@@ -1496,52 +1563,58 @@
             </div>
 
             <div class="bfcm-popup-body">
-                <div class="bfcm-offer-card">
-                    <div class="bfcm-offer-title">
-                        <span>🎁</span>
-                        <span>FREE Marketplace Audit Report</span>
-                    </div>
-                    <ul class="bfcm-benefits">
-                        <li>Complete marketplace performance analysis</li>
-                        <li>Competitor benchmarking & gap analysis</li>
-                        <li>Actionable improvement recommendations</li>
-                        <li>Revenue growth opportunities identified</li>
-                        <li>Buybox optimization strategies</li>
-                    </ul>
-                    
-                    <div style="text-align: center;">
-                        <div class="bfcm-discount-badge">UP TO 35% OFF</div>
-                        <p style="color: var(--gray); margin-top: 1rem; font-weight: 600;">On All Our Services During BFCM</p>
-                    </div>
-                </div>
+                <div class="bfcm-content-wrapper">
+                    <div class="bfcm-left-section">
+                        <div class="bfcm-offer-card">
+                            <div class="bfcm-offer-title">
+                                <span>🎁</span>
+                                <span>FREE Marketplace Audit Report</span>
+                            </div>
+                            <ul class="bfcm-benefits">
+                                <li>Complete marketplace performance analysis</li>
+                                <li>Competitor benchmarking & gap analysis</li>
+                                <li>Actionable improvement recommendations</li>
+                                <li>Revenue growth opportunities identified</li>
+                                <li>Buybox optimization strategies</li>
+                            </ul>
+                        </div>
 
-                <div class="bfcm-action-buttons">
-                    <a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank" class="bfcm-btn bfcm-btn-primary">
-                        📅 Book Free Consultation
-                    </a>
-                    <a href="https://wa.me/916390002163?text=Hi!%20I%20saw%20your%20BFCM%20offer%20for%20FREE%20Marketplace%20Audit%20%2B%2035%25%20OFF%20on%20services.%20I%27d%20like%20to%20learn%20more%20about%20how%20E%20Scalability%20can%20help%20grow%20my%20e-commerce%20business!" target="_blank" class="bfcm-btn bfcm-btn-whatsapp">
-                        💬 WhatsApp Us
-                    </a>
-                </div>
+                        <div class="bfcm-action-buttons">
+                            <a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank" class="bfcm-btn bfcm-btn-primary">
+                                📅 Book Free Consultation
+                            </a>
+                            <a href="https://wa.me/916390002163?text=Hi!%20I%20saw%20your%20BFCM%20offer%20for%20FREE%20Marketplace%20Audit%20%2B%2035%25%20OFF%20on%20services.%20I%27d%20like%20to%20learn%20more%20about%20how%20E%20Scalability%20can%20help%20grow%20my%20e-commerce%20business!" target="_blank" class="bfcm-btn bfcm-btn-whatsapp">
+                                💬 WhatsApp Us
+                            </a>
+                        </div>
+                    </div>
 
-                <div class="bfcm-timer">
-                    <div class="bfcm-timer-label">⏰ OFFER ENDS IN:</div>
-                    <div class="bfcm-timer-display" id="bfcmTimer">
-                        <div class="timer-unit">
-                            <span class="timer-number" id="days">00</span>
-                            <span class="timer-label">Days</span>
+                    <div class="bfcm-right-section">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <div class="bfcm-discount-badge">UP TO 35% OFF</div>
+                            <p style="color: var(--gray); margin-top: 1rem; font-weight: 600; font-size: 0.9rem;">On All Our Services During BFCM</p>
                         </div>
-                        <div class="timer-unit">
-                            <span class="timer-number" id="hours">00</span>
-                            <span class="timer-label">Hours</span>
-                        </div>
-                        <div class="timer-unit">
-                            <span class="timer-number" id="minutes">00</span>
-                            <span class="timer-label">Mins</span>
-                        </div>
-                        <div class="timer-unit">
-                            <span class="timer-number" id="seconds">00</span>
-                            <span class="timer-label">Secs</span>
+
+                        <div class="bfcm-timer">
+                            <div class="bfcm-timer-label">⏰ OFFER ENDS IN:</div>
+                            <div class="bfcm-timer-display" id="bfcmTimer">
+                                <div class="timer-unit">
+                                    <span class="timer-number" id="days">00</span>
+                                    <span class="timer-label">Days</span>
+                                </div>
+                                <div class="timer-unit">
+                                    <span class="timer-number" id="hours">00</span>
+                                    <span class="timer-label">Hours</span>
+                                </div>
+                                <div class="timer-unit">
+                                    <span class="timer-number" id="minutes">00</span>
+                                    <span class="timer-label">Mins</span>
+                                </div>
+                                <div class="timer-unit">
+                                    <span class="timer-number" id="seconds">00</span>
+                                    <span class="timer-label">Secs</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
