@@ -30,7 +30,7 @@
             background-size: 200% 100%;
             animation: gradientShift 5s ease infinite;
             padding: 0.8rem 2rem;
-            z-index: 1001;
+            z-index: 1100;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             transition: transform 0.3s ease;
         }
@@ -434,7 +434,7 @@
         /* Adjust nav for banner */
         nav {
             top: 60px;
-            z-index: 1002;
+            z-index: 1000;
         }
 
         .hero {
@@ -443,7 +443,11 @@
 
         @media (max-width: 968px) {
             nav {
-                top: 70px;
+                top: 60px;
+            }
+            
+            .blog-slide {
+                flex: 0 0 300px;
             }
         }
 
@@ -542,6 +546,11 @@
             .bfcm-banner {
                 position: fixed;
                 top: 0;
+                z-index: 1100;
+            }
+
+            .blog-slide {
+                flex: 0 0 280px;
             }
         }
 
@@ -567,7 +576,7 @@
         /* ===== NAVIGATION ===== */
         nav {
             position: fixed;
-            top: 0;
+            top: 60px;
             width: 100%;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(12px);
@@ -1067,15 +1076,99 @@
         .blog-section h2 {
             text-align: center;
             font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 4rem;
+            margin-bottom: 1rem;
             color: var(--dark);
             font-weight: 800;
         }
 
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+        .blog-section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .blog-slider-container {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .blog-slider {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s ease;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .blog-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .blog-slide {
+            flex: 0 0 350px;
+            scroll-snap-align: start;
+        }
+
+        .blog-slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: white;
+            color: var(--primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .slider-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .view-all-blogs {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .view-all-blogs:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .blog-cta-container {
+            text-align: center;
+            margin-top: 3rem;
         }
 
         .blog-card {
@@ -1085,6 +1178,9 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
             cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .blog-card:hover {
@@ -1122,6 +1218,9 @@
 
         .blog-content {
             padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .blog-date {
@@ -1147,6 +1246,7 @@
             color: var(--gray);
             line-height: 1.8;
             margin-bottom: 1.5rem;
+            flex: 1;
         }
 
         .read-more {
@@ -1157,6 +1257,7 @@
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s ease;
+            margin-top: auto;
         }
 
         .read-more:hover {
@@ -1748,43 +1849,30 @@
         </div>
     </div>
 
-    <!-- BLOG -->
+    <!-- BLOG SLIDER -->
     <section class="blog-section" id="blog">
         <div class="blog-container">
             <h2>Latest Insights & Guides</h2>
-            <div class="blog-grid">
-                <article class="blog-card" data-blog="export-us">
-                    <div class="blog-image">🌏</div>
-                    <div class="blog-content">
-                        <span class="blog-date">October 25, 2025</span>
-                        <h3>How to Start E-commerce in India and Export to the US</h3>
-                        <p class="blog-excerpt">Breaking into US markets from India seems daunting, but it's more accessible than ever. Learn the complete roadmap.</p>
-                        <a class="read-more">Read Full Guide →</a>
-                    </div>
-                </article>
-                <article class="blog-card" data-blog="sourcing">
-                    <div class="blog-image">📦</div>
-                    <div class="blog-content">
-                        <span class="blog-date">October 20, 2025</span>
-                        <h3>Is Product Sourcing Tough in 2025?</h3>
-                        <p class="blog-excerpt">The sourcing landscape has evolved. Discover modern strategies that actually work for Indian sellers.</p>
-                        <a class="read-more">Read Full Guide →</a>
-                    </div>
-                </article>
-                <article class="blog-card" data-blog="logistics">
-                    <div class="blog-image">🚚</div>
-                    <div class="blog-content">
-                        <span class="blog-date">October 15, 2025</span>
-                        <h3>Easy Logistics: Is It Really a Myth?</h3>
-                        <p class="blog-excerpt">Explore the real challenges of Indian logistics and solutions that work at scale.</p>
-                        <a class="read-more">Read Full Guide →</a>
-                    </div>
-                </article>
+            <p class="blog-section-subtitle">Expert strategies and actionable insights for e-commerce success</p>
+            
+            <div class="blog-slider-container">
+                <div class="blog-slider" id="blogSlider">
+                    <!-- Blog cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="blog-slider-nav">
+                <button class="slider-btn" id="prevBtn" onclick="slideBlogs(-1)">‹</button>
+                <button class="slider-btn" id="nextBtn" onclick="slideBlogs(1)">›</button>
+            </div>
+
+            <div class="blog-cta-container">
+                <a href="https://e-scalability.com/blogs/" class="view-all-blogs">View All Blogs →</a>
             </div>
         </div>
     </section>
 
-    <!-- BLOG MODAL -->
+    <!-- BLOG MODAL (Keep for quick preview if needed) -->
     <div id="blogModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -2624,47 +2712,129 @@
             }
         });
 
-        // ===== BLOG MODALS =====
-        function openBlogModal(blogId) {
-            const modal = document.getElementById('blogModal');
-            const title = document.getElementById('blogModalTitle');
-            const body = document.getElementById('blogModalBody');
+        // ===== BLOG SLIDER =====
+        const blogPosts = [
+            {
+                icon: '🌏',
+                date: 'October 25, 2025',
+                title: 'How to Start E-commerce in India and Export to the US',
+                excerpt: 'Breaking into US markets from India seems daunting, but it\'s more accessible than ever. Learn product selection, compliance, shipping solutions, and marketplace strategies.',
+                url: 'https://e-scalability.com/blogs/how-to-start-ecommerce.html',
+                gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+            },
+            {
+                icon: '📦',
+                date: 'October 20, 2025',
+                title: 'Is Product Sourcing Tough in 2025?',
+                excerpt: 'The sourcing landscape has evolved. Explore modern strategies, quality verification, MOQ negotiations, and building supplier partnerships that scale.',
+                url: 'https://e-scalability.com/blogs/product-sourcing-2025.html',
+                gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+            },
+            {
+                icon: '🚚',
+                date: 'October 15, 2025',
+                title: 'Easy Logistics: Is It Really a Myth?',
+                excerpt: 'Explore the real challenges of Indian logistics, 3PL vs in-house operations, and solutions that actually work for businesses at different scales.',
+                url: 'https://e-scalability.com/blogs/easy-logistics-myth.html',
+                gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+            },
+            {
+                icon: '🎯',
+                date: 'October 10, 2025',
+                title: 'Winning the Amazon Buybox in 2025',
+                excerpt: 'Master the strategies to win and maintain Amazon buybox ownership. Learn about pricing, fulfillment, metrics, and competitive tactics.',
+                url: 'https://e-scalability.com/blogs/amazon-buybox-strategy.html',
+                gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
+            },
+            {
+                icon: '💰',
+                date: 'October 5, 2025',
+                title: 'How to Reduce Marketplace Commission Fees',
+                excerpt: 'Strategic approaches to minimize marketplace fees while staying competitive. Pricing models, bundling, and operational optimization techniques.',
+                url: 'https://e-scalability.com/blogs/reduce-marketplace-fees.html',
+                gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
+            }
+        ];
+
+        let currentSlide = 0;
+
+        function renderBlogSlider() {
+            const slider = document.getElementById('blogSlider');
+            slider.innerHTML = blogPosts.map((blog, index) => `
+                <div class="blog-slide">
+                    <article class="blog-card" onclick="window.open('${blog.url}', '_blank')">
+                        <div class="blog-image" style="background: ${blog.gradient}">
+                            ${blog.icon}
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">${blog.date}</span>
+                            <h3>${blog.title}</h3>
+                            <p class="blog-excerpt">${blog.excerpt}</p>
+                            <a href="${blog.url}" target="_blank" class="read-more" onclick="event.stopPropagation()">Read Full Guide →</a>
+                        </div>
+                    </article>
+                </div>
+            `).join('');
+        }
+
+        function slideBlogs(direction) {
+            const slider = document.getElementById('blogSlider');
+            const slideWidth = 370; // 350px card + 20px gap
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
             
-            const data = blogData[blogId];
-            if (data) {
-                title.textContent = data.title;
-                body.innerHTML = data.content;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeBlogModal() {
-            const modal = document.getElementById('blogModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Blog card click handlers
-        document.querySelectorAll('.blog-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const blogId = card.getAttribute('data-blog');
-                openBlogModal(blogId);
+            let newScroll = slider.scrollLeft + (direction * slideWidth);
+            
+            if (newScroll < 0) newScroll = 0;
+            if (newScroll > maxScroll) newScroll = maxScroll;
+            
+            slider.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
             });
+        }
+
+        // Auto-play slider
+        let autoSlideInterval;
+        
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                const slider = document.getElementById('blogSlider');
+                const maxScroll = slider.scrollWidth - slider.clientWidth;
+                
+                if (slider.scrollLeft >= maxScroll) {
+                    slider.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    slideBlogs(1);
+                }
+            }, 5000); // Slide every 5 seconds
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // Initialize blog slider
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBlogSlider();
+            startAutoSlide();
+            
+            // Pause auto-slide on hover
+            const slider = document.getElementById('blogSlider');
+            slider.addEventListener('mouseenter', stopAutoSlide);
+            slider.addEventListener('mouseleave', startAutoSlide);
         });
 
-        // Close modal on outside click
-        document.getElementById('blogModal').addEventListener('click', (e) => {
-            if (e.target.id === 'blogModal') {
-                closeBlogModal();
-            }
-        });
+        // ===== BLOG MODALS (Removed - blogs now open in new pages) =====
+        // Blog modal functionality removed as blogs are now separate pages
+        
+        // Keep old blog data for reference if needed
+        const blogDetailData = blogData; // Store for potential future use
 
         // Close modals with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeModal();
-                closeBlogModal();
+                closeBFCMPopup();
             }
         });
 
