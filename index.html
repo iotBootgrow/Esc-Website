@@ -1,595 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript">     (function(c,l,a,r,i,t,y){         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);     })(window, document, "clarity", "script", "u0xc3fzw1h"); </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="E Scalability Commerce LLP - Leading E-commerce Growth Consultancy in India. Expert marketplace optimization, product sourcing, and international expansion for Amazon, Walmart, Flipkart & 20+ platforms.">
-    <meta name="keywords" content="ecommerce consultancy India, amazon seller consultant, walmart marketplace India, flipkart growth, product sourcing India, export to US, ecommerce SAAS, marketplace optimization, quick commerce, seller consultancy">
-    <meta name="author" content="E Scalability Commerce LLP">
-    <title>E Scalability Commerce LLP | E-commerce Growth Consultancy India</title>
+    <title>E Scalability Commerce | Future of E-commerce Growth</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23ec4899;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-family='Arial' font-size='50' font-weight='bold' fill='white' text-anchor='middle'%3EESC%3C/text%3E%3C/svg%3E">
     
     <style>
-        /* ===== CSS VARIABLES ===== */
-        :root {
-            --primary: #6366f1;
-            --secondary: #8b5cf6;
-            --accent: #ec4899;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --white: #ffffff;
-        }
-
-        /* ===== BFCM ANNOUNCEMENT BAR ===== */
-        .bfcm-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(90deg, #FF6B6B 0%, #FFE66D 25%, #4ECDC4 50%, #FF6B6B 75%, #FFE66D 100%);
-            background-size: 200% 100%;
-            animation: gradientShift 5s ease infinite;
-            padding: 0.8rem 2rem;
-            z-index: 1100;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .bfcm-banner.hidden {
-            transform: translateY(-100%);
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .bfcm-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .bfcm-icon {
-            font-size: 1.5rem;
-            animation: bounce 1s ease infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .bfcm-text {
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-align: center;
-        }
-
-        .bfcm-text strong {
-            color: #D63031;
-            font-weight: 800;
-        }
-
-        .bfcm-cta {
-            display: inline-block;
-            background: var(--dark);
-            color: white;
-            padding: 0.4rem 1.2rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 0.5rem;
-            transition: all 0.3s ease;
-            animation: pulse-button 2s ease infinite;
-        }
-
-        @keyframes pulse-button {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .bfcm-cta:hover {
-            background: #D63031;
-            transform: scale(1.1) !important;
-        }
-
-        .bfcm-close {
-            background: rgba(0,0,0,0.2);
-            border: none;
-            color: var(--dark);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .bfcm-close:hover {
-            background: rgba(0,0,0,0.4);
-            color: white;
-            transform: rotate(90deg);
-        }
-
-        /* ===== BFCM POPUP MODAL ===== */
-        .bfcm-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            z-index: 2500;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .bfcm-popup.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-        }
-
-        .bfcm-popup-content {
-            background: white;
-            border-radius: 30px;
-            max-width: 900px;
-            width: 95%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            animation: popupZoom 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 25px 80px rgba(0,0,0,0.4);
-        }
-
-        @keyframes popupZoom {
-            0% {
-                opacity: 0;
-                transform: scale(0.5) rotate(-5deg);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) rotate(0deg);
-            }
-        }
-
-        .bfcm-popup-header {
-            background: linear-gradient(135deg, #FF6B6B 0%, #D63031 100%);
-            padding: 1.5rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bfcm-popup-header::before {
-            content: '🎉';
-            position: absolute;
-            font-size: 15rem;
-            opacity: 0.1;
-            top: -3rem;
-            right: -3rem;
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .bfcm-popup-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255,255,255,0.3);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-            z-index: 10;
-        }
-
-        .bfcm-popup-close:hover {
-            background: white;
-            color: #D63031;
-            transform: rotate(90deg);
-        }
-
-        .bfcm-popup-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.3);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            animation: pulse 2s ease infinite;
-        }
-
-        .bfcm-popup-header h2 {
-            color: white;
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .bfcm-popup-header p {
-            color: rgba(255,255,255,0.95);
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .bfcm-popup-body {
-            padding: 1.5rem;
-            background: white;
-            position: relative;
-            z-index: 5;
-        }
-
-        .bfcm-content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .bfcm-offer-card {
-            background: linear-gradient(135deg, var(--light) 0%, white 100%);
-            border-radius: 20px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 2px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
-        }
-
-        .bfcm-offer-title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--dark);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .bfcm-offer-title span {
-            font-size: 1.5rem;
-        }
-
-        .bfcm-benefits {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 1.5rem;
-        }
-
-        .bfcm-benefits li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .bfcm-benefits li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #27AE60;
-            font-weight: bold;
-            font-size: 1.2rem;
-            background: #E8F8F5;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .bfcm-discount-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #FF6B6B 0%, #D63031 100%);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 15px;
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin: 0.8rem 0;
-            box-shadow: 0 8px 25px rgba(214, 48, 49, 0.3);
-            animation: pulse 2s ease infinite;
-        }
-
-        .bfcm-action-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .bfcm-btn {
-            flex: 1;
-            min-width: 180px;
-            padding: 0.9rem 1.5rem;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            border: none;
-            cursor: pointer;
-        }
-
-        .bfcm-btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-        }
-
-        .bfcm-btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
-        }
-
-        .bfcm-btn-whatsapp {
-            background: #25D366;
-            color: white;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        .bfcm-btn-whatsapp:hover {
-            background: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
-        }
-
-        .bfcm-timer {
-            text-align: center;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #FFE66D 0%, #FFAA00 100%);
-            border-radius: 15px;
-            margin-top: 1rem;
-        }
-
-        .bfcm-timer-label {
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .bfcm-timer-display {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .timer-unit {
-            background: white;
-            padding: 0.6rem 0.8rem;
-            border-radius: 10px;
-            min-width: 60px;
-        }
-
-        .timer-number {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--dark);
-            display: block;
-        }
-
-        .timer-label {
-            font-size: 0.75rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            z-index: 998;
-            transition: all 0.3s ease;
-            animation: pulse 2s ease infinite;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background: #128C7E;
-        }
-
-        /* Adjust nav for banner */
-        nav {
-            top: 60px;
-            z-index: 1000;
-        }
-
-        .hero {
-            padding-top: 10rem;
-        }
-
-        @media (max-width: 968px) {
-            nav {
-                top: 60px;
-            }
-            
-            .blog-slide {
-                flex: 0 0 300px;
-            }
-        }
-
-        /* Mobile responsiveness for BFCM */
-        @media (max-width: 968px) {
-            .bfcm-content-wrapper {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .bfcm-banner {
-                padding: 0.6rem 1rem;
-            }
-
-            .bfcm-text {
-                font-size: 0.85rem;
-            }
-
-            .bfcm-cta {
-                font-size: 0.85rem;
-                padding: 0.3rem 0.8rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .bfcm-popup-content {
-                max-height: 95vh;
-                border-radius: 20px;
-                margin: 0.5rem;
-                width: calc(100% - 1rem);
-            }
-
-            .bfcm-popup-header h2 {
-                font-size: 1.5rem;
-            }
-
-            .bfcm-popup-header {
-                padding: 1.2rem 1rem;
-            }
-
-            .bfcm-popup-body {
-                padding: 1rem;
-            }
-
-            .bfcm-content-wrapper {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .bfcm-discount-badge {
-                font-size: 1.2rem;
-                padding: 0.6rem 1rem;
-            }
-
-            .timer-unit {
-                min-width: 50px;
-                padding: 0.4rem 0.6rem;
-            }
-
-            .timer-number {
-                font-size: 1.2rem;
-            }
-
-            .timer-label {
-                font-size: 0.65rem;
-            }
-
-            .bfcm-btn {
-                min-width: 100%;
-                font-size: 0.9rem;
-                padding: 0.8rem 1rem;
-            }
-
-            .bfcm-action-buttons {
-                flex-direction: column;
-            }
-
-            .trust-badges {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .marketplace-logo {
-                flex: 0 0 180px;
-                height: 100px;
-            }
-
-            .hero {
-                padding-top: 9rem;
-            }
-
-            nav {
-                top: 60px;
-            }
-
-            .bfcm-banner {
-                position: fixed;
-                top: 0;
-                z-index: 1100;
-            }
-
-            .blog-slide {
-                flex: 0 0 280px;
-            }
-        }
-
-        /* ===== GLOBAL RESET ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --dark-bg: #0f0f23;
+            --darker-bg: #050510;
+            --card-bg: rgba(15, 15, 35, 0.8);
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --neon-blue: #00d4ff;
+            --neon-purple: #a855f7;
+            --neon-pink: #ec4899;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
+            background: var(--darker-bg);
+            color: var(--text-primary);
             overflow-x: hidden;
-            background: var(--white);
         }
 
-        /* ===== NAVIGATION ===== */
+        /* E-commerce Flow Background Animation */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a0b2e 50%, #0f0f23 100%);
+        }
+
+        .ecommerce-flow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* E-commerce Icons flowing */
+        .flow-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: flowPath 20s infinite ease-in-out;
+        }
+
+        @keyframes flowPath {
+            0% { 
+                transform: translate(0, 0) rotate(0deg); 
+                opacity: 0.1; 
+            }
+            25% { 
+                transform: translate(30vw, -20vh) rotate(90deg); 
+                opacity: 0.4; 
+            }
+            50% { 
+                transform: translate(60vw, 10vh) rotate(180deg); 
+                opacity: 0.3; 
+            }
+            75% { 
+                transform: translate(30vw, 30vh) rotate(270deg); 
+                opacity: 0.2; 
+            }
+            100% { 
+                transform: translate(0, 0) rotate(360deg); 
+                opacity: 0.1; 
+            }
+        }
+
+        /* Connection lines between icons */
+        .flow-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            opacity: 0.2;
+            animation: lineMove 15s infinite ease-in-out;
+        }
+
+        @keyframes lineMove {
+            0%, 100% { opacity: 0.1; transform: scaleX(0.5); }
+            50% { opacity: 0.3; transform: scaleX(1); }
+        }
+
+        /* Navigation */
         nav {
             position: fixed;
-            top: 60px;
+            top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(12px);
-            padding: 1.2rem 5%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 1.5rem 5%;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.3);
             z-index: 1000;
             transition: all 0.3s ease;
         }
 
         nav.scrolled {
-            padding: 0.8rem 5%;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 1rem 5%;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
         }
 
         .nav-container {
@@ -601,48 +126,50 @@
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            cursor: pointer;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.8)); }
+            50% { filter: drop-shadow(0 0 20px rgba(236, 72, 153, 0.8)); }
         }
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 3rem;
             list-style: none;
-            align-items: center;
         }
 
         .nav-links a {
-            color: var(--dark);
+            color: var(--text-primary);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
             position: relative;
+            transition: all 0.3s ease;
         }
 
-        .nav-links a::after {
+        .nav-links a::before {
             content: '';
             position: absolute;
             bottom: -5px;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary);
-            transition: width 0.3s;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            transition: width 0.3s ease;
         }
 
-        .nav-links a:hover::after {
+        .nav-links a:hover::before {
             width: 100%;
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--neon-blue);
         }
 
         .menu-toggle {
@@ -655,104 +182,33 @@
         .menu-toggle span {
             width: 28px;
             height: 3px;
-            background: var(--dark);
+            background: var(--text-primary);
             transition: all 0.3s ease;
             border-radius: 2px;
         }
 
-        /* ===== HERO SECTION ===== */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 8rem 5% 4rem;
             position: relative;
             overflow: hidden;
-            padding: 8rem 5% 4rem;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
         }
 
         .hero-content {
             max-width: 1200px;
             text-align: center;
-            color: white;
             z-index: 1;
             animation: fadeInUp 1s ease;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            line-height: 1.2;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-
-        .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: white;
-            color: var(--primary);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .cta-button.secondary:hover {
-            background: white;
-            color: var(--primary);
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
@@ -760,39 +216,161 @@
             }
         }
 
-        /* ===== TRUST BADGES ===== */
-        .trust-section {
-            background: white;
-            padding: 2rem 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGlow 3s ease-in-out infinite;
         }
 
-        .trust-badges {
+        @keyframes textGlow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5)); }
+            50% { filter: drop-shadow(0 0 40px rgba(168, 85, 247, 0.8)); }
+        }
+
+        .hero p {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(99, 102, 241, 0.6);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 4rem 5%;
+            background: rgba(15, 15, 35, 0.5);
+            border-top: 1px solid rgba(99, 102, 241, 0.3);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .stats-grid {
             max-width: 1400px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
         }
 
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            color: var(--gray);
-            font-weight: 600;
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .trust-badge span {
-            font-size: 2rem;
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
         }
 
-        /* ===== MARKETPLACE SLIDER ===== */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Marketplace Slider */
         .marketplace-section {
             padding: 5rem 5%;
-            background: var(--light);
+            background: rgba(15, 15, 35, 0.3);
             overflow: hidden;
         }
 
@@ -800,7 +378,7 @@
             text-align: center;
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 3rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 800;
@@ -832,19 +410,21 @@
             flex: 0 0 220px;
             height: 120px;
             margin: 0 20px;
-            background: white;
+            background: var(--card-bg);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             cursor: pointer;
+            border: 1px solid rgba(99, 102, 241, 0.3);
         }
 
         .marketplace-logo:hover {
             transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+            border-color: var(--neon-blue);
         }
 
         .marketplace-logo svg {
@@ -852,39 +432,38 @@
             height: 70px;
         }
 
-        /* ===== SERVICES SECTION ===== */
-        .services {
+        /* Services Section */
+        .services-section {
             padding: 6rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
-        .services h2 {
+        .section-title {
             text-align: center;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
             margin-bottom: 4rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 800;
         }
 
-        .service-grid {
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
         }
 
         .service-card {
-            background: white;
-            padding: 2.5rem;
+            background: var(--card-bg);
             border-radius: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            padding: 2.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.4s ease;
+            cursor: pointer;
             position: relative;
             overflow: hidden;
-            cursor: pointer;
         }
 
         .service-card::before {
@@ -893,180 +472,50 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transition: transform 0.3s;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .service-card:hover::before {
-            transform: scaleX(1);
+            opacity: 1;
         }
 
         .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
-            border-color: var(--primary);
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--neon-blue);
+            box-shadow: 0 25px 70px rgba(0, 212, 255, 0.4);
         }
 
         .service-icon {
-            font-size: 3rem;
+            font-size: 4rem;
             margin-bottom: 1.5rem;
             display: inline-block;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
 
         .service-card:hover .service-icon {
-            transform: scale(1.2) rotate(10deg);
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 20px var(--neon-blue));
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: var(--dark);
-            font-weight: 700;
+            color: var(--text-primary);
         }
 
         .service-card p {
-            color: var(--gray);
+            color: var(--text-secondary);
             line-height: 1.8;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
         }
 
-        .learn-more {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--primary);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        /* ===== MODAL STYLES ===== */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            z-index: 2000;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 25px;
-            max-width: 800px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            animation: zoomIn 0.3s ease;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-
-        @keyframes zoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            padding: 2rem;
-            border-radius: 25px 25px 0 0;
-            position: relative;
-        }
-
-        .modal-header h2 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.2);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .modal-close:hover {
-            background: white;
-            color: var(--primary);
-            transform: rotate(90deg);
-        }
-
-        .modal-body {
-            padding: 2rem;
-        }
-
-        .modal-body h3 {
-            color: var(--dark);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .modal-body ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .modal-body li {
-            padding: 0.8rem 0;
-            padding-left: 2rem;
-            position: relative;
-            color: var(--gray);
-            line-height: 1.8;
-        }
-
-        .modal-body li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .modal-body p {
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        /* ===== BLOG SECTION ===== */
+        /* Blog Section */
         .blog-section {
             padding: 6rem 5%;
-            background: var(--light);
+            background: rgba(15, 15, 35, 0.3);
         }
 
         .blog-container {
@@ -1078,121 +527,45 @@
             text-align: center;
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 1rem;
-            color: var(--dark);
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 800;
         }
 
         .blog-section-subtitle {
             text-align: center;
-            color: var(--gray);
+            color: var(--text-secondary);
             font-size: 1.1rem;
             margin-bottom: 3rem;
         }
 
-        .blog-slider-container {
-            position: relative;
-            overflow: hidden;
-            padding: 2rem 0;
-        }
-
-        .blog-slider {
-            display: flex;
-            gap: 2rem;
-            transition: transform 0.5s ease;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .blog-slider::-webkit-scrollbar {
-            display: none;
-        }
-
-        .blog-slide {
-            flex: 0 0 350px;
-            scroll-snap-align: start;
-        }
-
-        .blog-slider-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .slider-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: none;
-            background: white;
-            color: var(--primary);
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slider-btn:hover {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .slider-btn:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-
-        .view-all-blogs {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(99, 102, 241, 0.3);
-        }
-
-        .view-all-blogs:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        .blog-cta-container {
-            text-align: center;
-            margin-top: 3rem;
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         .blog-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(99, 102, 241, 0.3);
             transition: all 0.3s ease;
             cursor: pointer;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
         }
 
         .blog-card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 25px 70px rgba(0, 212, 255, 0.4);
+            border-color: var(--neon-blue);
         }
 
         .blog-image {
             width: 100%;
             height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1202,26 +575,8 @@
             overflow: hidden;
         }
 
-        .blog-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .blog-card:hover .blog-image::after {
-            left: 100%;
-        }
-
         .blog-content {
             padding: 2rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
         }
 
         .blog-date {
@@ -1238,112 +593,74 @@
         .blog-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--dark);
+            color: var(--text-primary);
             font-weight: 700;
             line-height: 1.4;
         }
 
         .blog-excerpt {
-            color: var(--gray);
+            color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 1.5rem;
-            flex: 1;
         }
 
         .read-more {
-            color: var(--primary);
+            color: var(--neon-blue);
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s ease;
-            margin-top: auto;
         }
 
         .read-more:hover {
             gap: 1rem;
-            color: var(--accent);
         }
 
-        /* ===== ABOUT SECTION ===== */
-        .about {
+        /* About Section */
+        .about-section {
             padding: 6rem 5%;
+        }
+
+        .about-container {
             max-width: 1400px;
             margin: 0 auto;
-        }
-
-        .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 5rem;
             align-items: center;
         }
 
-        .about h2 {
+        .about-content h2 {
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 800;
         }
 
-        .about p {
-            color: var(--gray);
+        .about-content p {
+            color: var(--text-secondary);
             line-height: 2;
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-box {
-            text-align: center;
-            padding: 2.5rem;
-            background: var(--light);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .stat-box:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label {
-            color: var(--gray);
-            margin-top: 0.5rem;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        /* ===== TESTIMONIALS ===== */
-        .testimonials {
+        /* Testimonials */
+        .testimonials-section {
             padding: 6rem 5%;
-            background: var(--light);
+            background: rgba(15, 15, 35, 0.3);
         }
 
-        .testimonials h2 {
+        .testimonials-section h2 {
             text-align: center;
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 4rem;
-            color: var(--dark);
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 800;
         }
 
@@ -1356,20 +673,21 @@
         }
 
         .testimonial-card {
-            background: white;
+            background: var(--card-bg);
             padding: 2rem;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(99, 102, 241, 0.3);
             transition: all 0.3s ease;
         }
 
         .testimonial-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: var(--neon-blue);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
         }
 
         .testimonial-text {
-            color: var(--gray);
+            color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 1.5rem;
             font-style: italic;
@@ -1395,35 +713,21 @@
         }
 
         .author-info h4 {
-            color: var(--dark);
+            color: var(--text-primary);
             font-weight: 700;
         }
 
         .author-info p {
-            color: var(--gray);
+            color: var(--text-secondary);
             font-size: 0.9rem;
         }
 
-        /* ===== CONTACT SECTION ===== */
-        .contact {
+        /* Contact Section */
+        .contact-section {
             padding: 6rem 5%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
             position: relative;
             overflow: hidden;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            animation: pulse 10s ease-in-out infinite;
         }
 
         .contact-container {
@@ -1434,16 +738,19 @@
             z-index: 1;
         }
 
-        .contact h2 {
+        .contact-section h2 {
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 800;
         }
 
-        .contact p {
+        .contact-section p {
             font-size: 1.2rem;
             margin-bottom: 3rem;
-            opacity: 0.95;
+            color: var(--text-secondary);
         }
 
         .contact-form {
@@ -1455,20 +762,20 @@
         .contact-form textarea {
             width: 100%;
             padding: 1.2rem;
-            border: 2px solid transparent;
+            border: 2px solid rgba(99, 102, 241, 0.3);
             border-radius: 15px;
             font-size: 1rem;
             font-family: inherit;
             transition: all 0.3s ease;
-            background: rgba(255,255,255,0.95);
+            background: var(--card-bg);
+            color: var(--text-primary);
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
         }
 
         .contact-form textarea {
@@ -1477,8 +784,8 @@
         }
 
         .submit-btn {
-            background: white;
-            color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
             padding: 1.2rem 3rem;
             border: none;
             border-radius: 50px;
@@ -1486,46 +793,19 @@
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
         }
 
         .submit-btn:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
         }
 
-        .social-links {
-            margin-top: 3rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: white;
-            color: var(--primary);
-            transform: translateY(-5px) rotate(10deg);
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--dark);
-            color: white;
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
             padding: 4rem 5% 2rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.3);
         }
 
         .footer-content {
@@ -1540,6 +820,7 @@
         .footer-section h3 {
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
+            color: var(--neon-blue);
         }
 
         .footer-section ul {
@@ -1551,41 +832,74 @@
         }
 
         .footer-section a {
-            color: rgba(255,255,255,0.7);
+            color: var(--text-secondary);
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: var(--primary);
+            color: var(--neon-blue);
             padding-left: 5px;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(99, 102, 241, 0.3);
+            color: var(--text-secondary);
         }
 
-        /* ===== SCROLL TO TOP ===== */
-        .scroll-top {
+        /* Floating Buttons */
+        .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            border: none;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
             border-radius: 50%;
-            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.2);
+            box-shadow: 0 15px 60px rgba(37, 211, 102, 0.7);
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
             opacity: 0;
             pointer-events: none;
             transition: all 0.3s ease;
             z-index: 999;
+            border: none;
         }
 
         .scroll-top.visible {
@@ -1595,9 +909,10 @@
 
         .scroll-top:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(99, 102, 241, 0.6);
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* Responsive */
         @media (max-width: 968px) {
             .nav-links {
                 position: fixed;
@@ -1605,7 +920,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: rgba(255, 255, 255, 0.98);
+                background: rgba(15, 15, 35, 0.98);
                 backdrop-filter: blur(12px);
                 flex-direction: column;
                 justify-content: center;
@@ -1621,118 +936,34 @@
                 display: flex;
             }
 
-            .about-content {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .blog-grid,
-            .service-grid {
+            .about-container {
                 grid-template-columns: 1fr;
             }
 
-            .stats {
-                grid-template-columns: 1fr;
+            .hero h1 {
+                font-size: 3rem;
             }
 
-            .modal-content {
-                margin: 1rem;
+            .marketplace-logo {
+                flex: 0 0 180px;
+                height: 100px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- BFCM ANNOUNCEMENT BAR -->
-    <div class="bfcm-banner" id="bfcmBanner">
-        <div class="bfcm-content">
-            <span class="bfcm-icon">🎉</span>
-            <span class="bfcm-text">
-                <strong>BFCM EXCLUSIVE:</strong> Get FREE Marketplace Audit Report + Up to 35% OFF on All Services! 
-                <a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank" class="bfcm-cta">Book Free Consultation →</a>
-            </span>
-            <button class="bfcm-close" onclick="closeBFCMBanner()">&times;</button>
-        </div>
+    <div class="animated-bg">
+        <div class="ecommerce-flow" id="ecommerceFlow"></div>
     </div>
 
-    <!-- BFCM POPUP MODAL -->
-    <div class="bfcm-popup" id="bfcmPopup">
-        <div class="bfcm-popup-content">
-            <button class="bfcm-popup-close" onclick="closeBFCMPopup()">&times;</button>
-            
-            <div class="bfcm-popup-header">
-                <div class="bfcm-popup-badge">⚡ LIMITED TIME OFFER</div>
-                <h2>BFCM Mega Sale!</h2>
-                <p>Black Friday Cyber Monday Exclusive Deals</p>
-            </div>
-
-            <div class="bfcm-popup-body">
-                <div class="bfcm-content-wrapper">
-                    <div class="bfcm-left-section">
-                        <div class="bfcm-offer-card">
-                            <div class="bfcm-offer-title">
-                                <span>🎁</span>
-                                <span>FREE Marketplace Audit Report</span>
-                            </div>
-                            <ul class="bfcm-benefits">
-                                <li>Complete marketplace performance analysis</li>
-                                <li>Competitor benchmarking & gap analysis</li>
-                                <li>Actionable improvement recommendations</li>
-                                <li>Revenue growth opportunities identified</li>
-                                <li>Buybox optimization strategies</li>
-                            </ul>
-                        </div>
-
-                        <div class="bfcm-action-buttons">
-                            <a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank" class="bfcm-btn bfcm-btn-primary">
-                                📅 Book Free Consultation
-                            </a>
-                            <a href="https://wa.me/916390002163?text=Hi!%20I%20saw%20your%20BFCM%20offer%20for%20FREE%20Marketplace%20Audit%20%2B%2035%25%20OFF%20on%20services.%20I%27d%20like%20to%20learn%20more%20about%20how%20E%20Scalability%20can%20help%20grow%20my%20e-commerce%20business!" target="_blank" class="bfcm-btn bfcm-btn-whatsapp">
-                                💬 WhatsApp Us
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="bfcm-right-section">
-                        <div style="text-align: center; margin-bottom: 1.5rem;">
-                            <div class="bfcm-discount-badge">UP TO 35% OFF</div>
-                            <p style="color: var(--gray); margin-top: 1rem; font-weight: 600; font-size: 0.9rem;">On All Our Services During BFCM</p>
-                        </div>
-
-                        <div class="bfcm-timer">
-                            <div class="bfcm-timer-label">⏰ OFFER ENDS IN:</div>
-                            <div class="bfcm-timer-display" id="bfcmTimer">
-                                <div class="timer-unit">
-                                    <span class="timer-number" id="days">00</span>
-                                    <span class="timer-label">Days</span>
-                                </div>
-                                <div class="timer-unit">
-                                    <span class="timer-number" id="hours">00</span>
-                                    <span class="timer-label">Hours</span>
-                                </div>
-                                <div class="timer-unit">
-                                    <span class="timer-number" id="minutes">00</span>
-                                    <span class="timer-label">Mins</span>
-                                </div>
-                                <div class="timer-unit">
-                                    <span class="timer-number" id="seconds">00</span>
-                                    <span class="timer-label">Secs</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- WHATSAPP FLOAT BUTTON -->
-    <a href="https://wa.me/916390002163?text=Hi!%20I%20saw%20your%20BFCM%20offer%20for%20FREE%20Marketplace%20Audit%20%2B%2035%25%20OFF%20on%20services.%20I%27d%20like%20to%20learn%20more%20about%20how%20E%20Scalability%20can%20help%20grow%20my%20e-commerce%20business!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
-        💬
-    </a>
-
-    <!-- NAVIGATION -->
+    <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">E Scalability</div>
+            <div class="logo">E SCALABILITY</div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -1748,29 +979,45 @@
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
-                    <div class="hero-content">
-            <h1>Scale Your E-commerce Empire</h1>
-            <p>From zero to hero across Amazon, Walmart, Flipkart & 20+ marketplaces. Expert strategies for marketplace dominance, buybox wins & commission optimization.</p>
+        <div class="hero-content">
+            <h1>FUTURE OF E-COMMERCE</h1>
+            <p>Transform your marketplace presence with AI-powered strategies across Amazon, Walmart, Flipkart & 20+ platforms. We don't just scale—we dominate.</p>
             <div class="cta-buttons">
-                <a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank" class="cta-button">Book Free BFCM Audit</a>
-                <a href="#services" class="cta-button secondary">Explore Services</a>
+                <a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank" class="cta-button cta-primary">Launch Your Empire</a>
+                <a href="#services" class="cta-button cta-secondary">Explore Solutions</a>
             </div>
         </div>
     </section>
 
-    <!-- TRUST BADGES -->
-    <section class="trust-section">
-        <div class="trust-badges">
-            <div class="trust-badge"><span>⭐</span><div>5+ Years Experience</div></div>
-            <div class="trust-badge"><span>🏆</span><div>100+ Happy Clients</div></div>
-            <div class="trust-badge"><span>🌍</span><div>3 Countries Covered</div></div>
-            <div class="trust-badge"><span>📊</span><div>20+ Marketplaces</div></div>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Years Dominating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🚀</div>
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Platforms Conquered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💎</div>
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Success Stories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🌍</div>
+                <div class="stat-number">3</div>
+                <div class="stat-label">Global Markets</div>
+            </div>
         </div>
     </section>
 
-    <!-- MARKETPLACE SLIDER -->
+    <!-- Marketplace Slider -->
     <section class="marketplace-section">
         <h2>Trusted Across Leading Marketplaces</h2>
         <div class="slider-container">
@@ -1778,145 +1025,137 @@
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="services" id="services">
-        <h2>Comprehensive E-commerce Solutions</h2>
-        <div class="service-grid">
-            <div class="service-card" data-service="amazon">
-                <div class="service-icon">📦</div>
-                <h3>Amazon Marketplace</h3>
-                <p>Complete Amazon optimization from listing to advertising. Win the buybox, dominate search rankings.</p>
-                <a class="learn-more">Learn More →</a>
-            </div>
-            <div class="service-card" data-service="walmart">
-                <div class="service-icon">🛒</div>
-                <h3>Walmart Marketplace</h3>
-                <p>Navigate Walmart's Spec 5.0 requirements. Expert attribute optimization for maximum visibility.</p>
-                <a class="learn-more">Learn More →</a>
-            </div>
-            <div class="service-card" data-service="tiktok">
-                <div class="service-icon">🎵</div>
-                <h3>TikTok Shop</h3>
-                <p>Leverage viral content and TikTok's algorithm. Turn massive audiences into loyal customers.</p>
-                <a class="learn-more">Learn More →</a>
-            </div>
-            <div class="service-card" data-service="sourcing">
-                <div class="service-icon">🌏</div>
-                <h3>Product Sourcing</h3>
-                <p>Connect with verified Indian suppliers. Quality control, MOQ negotiation, and partnership building.</p>
-                <a class="learn-more">Learn More →</a>
-            </div>
-            <div class="service-card" data-service="account">
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <h2 class="section-title">REVOLUTIONARY SOLUTIONS</h2>
+        <div class="services-grid">
+            <div class="service-card">
                 <div class="service-icon">🎯</div>
-                <h3>Account Management</h3>
-                <p>End-to-end marketplace account handling. From setup to compliance, violation-free operations.</p>
-                <a class="learn-more">Learn More →</a>
+                <h3>Amazon Dominance</h3>
+                <p>Win the buybox, crush competitors, and own the algorithm with our battle-tested strategies.</p>
             </div>
-            <div class="service-card" data-service="shopify">
-                <div class="service-icon">💻</div>
-                <h3>Shopify Development</h3>
-                <p>Build stunning, high-converting stores. SEO optimization and revenue-generating platforms.</p>
-                <a class="learn-more">Learn More →</a>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Walmart Mastery</h3>
+                <p>Navigate Spec 5.0 like pros. Maximum visibility, minimum friction, pure results.</p>
             </div>
-            <div class="service-card" data-service="commission">
+            <div class="service-card">
+                <div class="service-icon">🔥</div>
+                <h3>TikTok Viral Engine</h3>
+                <p>Turn viral moments into revenue streams. 1B+ users waiting for your products.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌏</div>
+                <h3>Global Sourcing</h3>
+                <p>Premium Indian suppliers. Quality verified. Partnerships that scale with your ambition.</p>
+            </div>
+            <div class="service-card">
                 <div class="service-icon">💰</div>
-                <h3>Commission Optimization</h3>
-                <p>Strategic pricing to minimize marketplace fees. Maximize profit margins without losing competitiveness.</p>
-                <a class="learn-more">Learn More →</a>
+                <h3>Commission Killer</h3>
+                <p>Slash marketplace fees by 30%. Keep more, sell smart, dominate pricing.</p>
             </div>
-            <div class="service-card" data-service="buybox">
+            <div class="service-card">
                 <div class="service-icon">🏆</div>
-                <h3>Buybox Strategy</h3>
-                <p>Win and maintain the coveted buybox. Data-driven strategies for consistent buybox ownership.</p>
-                <a class="learn-more">Learn More →</a>
+                <h3>Buybox Warfare</h3>
+                <p>Data-driven strategies to win and hold the buybox. 300%+ sales increase guaranteed.</p>
             </div>
-            <div class="service-card" data-service="competition">
-                <div class="service-icon">⚔️</div>
-                <h3>Competitor Analysis</h3>
-                <p>Beat your competition with real-time monitoring. Price tracking, keyword gaps, and market intelligence.</p>
-                <a class="learn-more">Learn More →</a>
+            <div class="service-card">
+                <div class="service-icon">🏭</div>
+                <h3>Factory Setup & Labour Compliance</h3>
+                <p>32+ years of proven expertise. 100+ factories setup in UP. Complete compliance solutions from industry veterans.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📦</div>
+                <h3>Product Sourcing</h3>
+                <p>Connect with verified suppliers. Quality control, MOQ negotiation, and relationship building.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Shopify Development</h3>
+                <p>High-converting stores with stunning design. SEO optimized and revenue-generating platforms.</p>
             </div>
         </div>
     </section>
 
-    <!-- SERVICE MODALS -->
-    <div id="serviceModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle"></h2>
-                <button class="modal-close" onclick="closeModal()">&times;</button>
-            </div>
-            <div class="modal-body" id="modalBody"></div>
-        </div>
-    </div>
-
-    <!-- BLOG SLIDER -->
+    <!-- Blog Section -->
     <section class="blog-section" id="blog">
         <div class="blog-container">
             <h2>Latest Insights & Guides</h2>
             <p class="blog-section-subtitle">Expert strategies and actionable insights for e-commerce success</p>
             
-            <div class="blog-slider-container">
-                <div class="blog-slider" id="blogSlider">
-                    <!-- Blog cards will be inserted here by JavaScript -->
+            <div class="blog-grid">
+                <div class="blog-card" onclick="window.location.href='blogs/how-to-start-ecommerce-india-export-us.html'">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                        🌏
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">November 12, 2025</span>
+                        <h3>How to Start E-commerce in India and Export to the US</h3>
+                        <p class="blog-excerpt">Complete roadmap from product selection to international shipping. Learn compliance, marketplace strategies, and avoid common pitfalls.</p>
+                        <a href="blogs/how-to-start-ecommerce-india-export-us.html" class="read-more">Read Full Guide →</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="blog-slider-nav">
-                <button class="slider-btn" id="prevBtn" onclick="slideBlogs(-1)">‹</button>
-                <button class="slider-btn" id="nextBtn" onclick="slideBlogs(1)">›</button>
-            </div>
+                <div class="blog-card" onclick="window.location.href='blogs/product-sourcing-2025.html'">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+                        📦
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">October 20, 2025</span>
+                        <h3>Is Product Sourcing Tough in 2025?</h3>
+                        <p class="blog-excerpt">Modern sourcing strategies, quality verification, MOQ negotiations, and building supplier partnerships that scale.</p>
+                        <a href="blogs/product-sourcing-2025.html" class="read-more">Read Full Guide →</a>
+                    </div>
+                </div>
 
-            <div class="blog-cta-container">
-                <a href="https://e-scalability.com/blogs/" class="view-all-blogs">View All Blogs →</a>
+                <div class="blog-card" onclick="window.location.href='blogs/easy-logistics-myth.html'">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+                        🚚
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">October 15, 2025</span>
+                        <h3>Easy Logistics: Is It Really a Myth?</h3>
+                        <p class="blog-excerpt">Deep dive into Indian logistics reality. 3PL vs in-house comparison, hidden costs, and solutions that work.</p>
+                        <a href="blogs/easy-logistics-myth.html" class="read-more">Read Full Guide →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- BLOG MODAL (Keep for quick preview if needed) -->
-    <div id="blogModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="blogModalTitle"></h2>
-                <button class="modal-close" onclick="closeBlogModal()">&times;</button>
-            </div>
-            <div class="modal-body" id="blogModalBody"></div>
-        </div>
-    </div>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <div>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
                 <h2>About E Scalability Commerce LLP</h2>
                 <p>Founded with a mission to democratize e-commerce success, we've spent over 5 years helping businesses navigate complex marketplace ecosystems.</p>
                 <p>We don't just provide consultancy—we partner with you. From finding the right Indian suppliers to dominating international marketplaces, we handle every aspect of your e-commerce journey.</p>
-                <p><strong>Our Expertise:</strong> Marketplace optimization, buybox strategies, commission reduction, competitor analysis, SAAS platforms, and international expansion across Indian, US, and UK markets.</p>
-                <p><em>"We transform marketplace challenges into revenue opportunities."</em></p>
+                <p><strong>Our Expertise:</strong> Marketplace optimization, buybox strategies, commission reduction, competitor analysis, and international expansion across Indian, US, and UK markets.</p>
+                <p><strong>Factory Setup Division:</strong> Led by industry veterans with 32+ years of proven track record. Successfully helped setup and ensure labour compliance for 100+ factories across Uttar Pradesh.</p>
             </div>
-            <div class="stats">
-                <div class="stat-box">
+            <div class="stats-grid">
+                <div class="stat-card">
                     <div class="stat-number">5+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
-                <div class="stat-box">
+                <div class="stat-card">
                     <div class="stat-number">20+</div>
                     <div class="stat-label">Marketplaces</div>
                 </div>
-                <div class="stat-box">
+                <div class="stat-card">
                     <div class="stat-number">100+</div>
                     <div class="stat-label">Happy Clients</div>
                 </div>
-                <div class="stat-box">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Countries</div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Factories Setup</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
+    <!-- Testimonials -->
+    <section class="testimonials-section">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-grid">
             <div class="testimonial-card">
@@ -1950,20 +1189,20 @@
                 </div>
             </div>
             <div class="testimonial-card">
-                <p class="testimonial-text">"Managing multiple accounts was overwhelming until they stepped in. Their expertise streamlined everything and boosted our sales."</p>
+                <p class="testimonial-text">"The factory compliance team is exceptional. 32 years of experience shows in every detail. Professional and thorough."</p>
                 <div class="testimonial-author">
-                    <div class="author-avatar">KJ</div>
+                    <div class="author-avatar">RK</div>
                     <div class="author-info">
-                        <h4>Kevin Jr.</h4>
-                        <p>Owner, Indoor Outdoor LLC</p>
+                        <h4>Rajesh Kumar</h4>
+                        <p>Manufacturing Unit, Noida</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
         <div class="contact-container">
             <h2>Ready to Scale Your Business?</h2>
             <p>Let's discuss how we can accelerate your e-commerce growth</p>
@@ -1974,22 +1213,16 @@
                 <textarea placeholder="Tell us about your business and goals *" required></textarea>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
-            <div class="social-links">
-                <a href="mailto:escalabilitycommerce@gmail.com" class="social-link" title="Email">📧</a>
-                <a href="https://wa.me/916390002163?text=Hi!%20I%27d%20like%20to%20learn%20more%20about%20E%20Scalability%20services." target="_blank" class="social-link" title="WhatsApp">💬</a>
-                <a href="tel:+916390002163" class="social-link" title="Call">📞</a>
-                <a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank" class="social-link" title="Book a Call">📅</a>
-            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>E Scalability Commerce LLP</h3>
-                <p>Your partner in e-commerce growth across Indian, US, and UK marketplaces.</p>
-                <p style="margin-top: 1rem;"><strong>e-scalability.com</strong></p>
+                <p style="color: var(--text-secondary); line-height: 1.8;">Your partner in e-commerce growth across Indian, US, and UK marketplaces.</p>
+                <p style="margin-top: 1rem; color: var(--text-secondary);"><strong>e-scalability.com</strong></p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
@@ -2007,16 +1240,16 @@
                     <li><a href="#services">Amazon Optimization</a></li>
                     <li><a href="#services">Walmart Marketplace</a></li>
                     <li><a href="#services">Product Sourcing</a></li>
+                    <li><a href="#services">Factory Setup & Compliance</a></li>
                     <li><a href="#services">Buybox Strategy</a></li>
-                    <li><a href="#services">Commission Optimization</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
                 <ul>
-                    <li>📧 escalabilitycommerce@gmail.com</li>
-                    <li>📞 +91 6390002163</li>
-                    <li>📍 Lucknow, India</li>
+                    <li style="color: var(--text-secondary);">📧 escalabilitycommerce@gmail.com</li>
+                    <li style="color: var(--text-secondary);">📞 +91 6390002163</li>
+                    <li style="color: var(--text-secondary);">📍 Lucknow, India</li>
                     <li><a href="https://calendar.app.google/difympEjXkJVUMqV6" target="_blank">📅 Book a Call</a></li>
                     <li><a href="https://wa.me/916390002163" target="_blank">💬 WhatsApp</a></li>
                 </ul>
@@ -2027,562 +1260,76 @@
         </div>
     </footer>
 
-    <!-- SCROLL TO TOP -->
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/916390002163" target="_blank" class="whatsapp-float">💬</a>
     <button class="scroll-top" id="scrollTop">↑</button>
 
     <script>
-        // ===== SERVICE DATA =====
-        const serviceData = {
-            amazon: {
-                title: 'Amazon Marketplace Mastery',
-                content: `
-                    <p>Selling on Amazon comes with fierce competition and ever-evolving algorithms. We take the guesswork out of your Amazon journey with expert optimization and data-driven strategies.</p>
-                    
-                    <h3>What We Do:</h3>
-                    <ul>
-                        <li>Product listing optimization with keyword-rich titles, bullets, and descriptions</li>
-                        <li>Enhanced Brand Content (EBC) and A+ Content creation</li>
-                        <li>Amazon PPC campaign management (Sponsored Products, Brands, Display)</li>
-                        <li>Brand Registry setup and IP protection</li>
-                        <li>Inventory management and FBA optimization</li>
-                        <li>Review and rating management strategies</li>
-                        <li>Algorithm compliance and policy adherence</li>
-                        <li>Sales analytics and performance tracking</li>
-                    </ul>
-
-                    <h3>Why Choose Us:</h3>
-                    <ul>
-                        <li>Proven track record of increasing organic rankings by 300%+</li>
-                        <li>Expert knowledge of Amazon's A9/A10 algorithm</li>
-                        <li>Reduce ACoS while scaling sales</li>
-                        <li>Complete buybox optimization strategies</li>
-                    </ul>
-                `
-            },
-            walmart: {
-                title: 'Walmart Marketplace Excellence',
-                content: `
-                    <p>Navigating Walmart's Spec 5.0 requirements can be challenging, especially with attributes now playing a major role in product visibility. We optimize your products for maximum quality and reach.</p>
-                    
-                    <h3>Our Walmart Services:</h3>
-                    <ul>
-                        <li>Spec 5.0 compliance and attribute optimization</li>
-                        <li>Product catalog setup with rich media</li>
-                        <li>Walmart Connect advertising campaigns</li>
-                        <li>Brand setup and trademark registration assistance</li>
-                        <li>Inventory sync and fulfillment optimization</li>
-                        <li>Competitive pricing strategies</li>
-                        <li>Performance dashboard monitoring</li>
-                        <li>Issue resolution and account health management</li>
-                    </ul>
-
-                    <h3>Success Metrics:</h3>
-                    <ul>
-                        <li>Helped 15+ clients scale on Walmart Marketplace</li>
-                        <li>Average visibility improvement of 250%</li>
-                        <li>Expert handling of WFS (Walmart Fulfillment Services)</li>
-                        <li>Strategic growth from onboarding to profitability</li>
-                    </ul>
-                `
-            },
-            tiktok: {
-                title: 'TikTok Shop Strategy',
-                content: `
-                    <p>TikTok Shop is revolutionizing how brands connect with audiences through engaging, viral content. We help you tap into this dynamic platform and turn views into sales.</p>
-                    
-                    <h3>TikTok Shop Services:</h3>
-                    <ul>
-                        <li>Shop setup and product catalog optimization</li>
-                        <li>Viral content strategy development</li>
-                        <li>TikTok algorithm leveraging for maximum reach</li>
-                        <li>Influencer partnership coordination</li>
-                        <li>TikTok Ads campaign management</li>
-                        <li>Live shopping event planning</li>
-                        <li>Trend analysis and content calendar creation</li>
-                        <li>Conversion optimization for Gen Z audiences</li>
-                    </ul>
-
-                    <h3>Why TikTok Shop:</h3>
-                    <ul>
-                        <li>Access to 1+ billion active users</li>
-                        <li>Higher engagement rates than traditional platforms</li>
-                        <li>Perfect for product discovery and impulse purchases</li>
-                        <li>Viral potential can 10x your reach overnight</li>
-                    </ul>
-                `
-            },
-            sourcing: {
-                title: 'Product Sourcing Excellence',
-                content: `
-                    <p>Connect with verified Indian domestic suppliers for reliable, quality products at competitive prices. We handle everything from discovery to partnership building.</p>
-                    
-                    <h3>Sourcing Services:</h3>
-                    <ul>
-                        <li>Supplier discovery and vetting across India</li>
-                        <li>Factory visits and quality audits</li>
-                        <li>MOQ (Minimum Order Quantity) negotiations</li>
-                        <li>Sample procurement and testing</li>
-                        <li>Payment terms negotiation</li>
-                        <li>Quality control and inspection protocols</li>
-                        <li>Long-term supplier relationship management</li>
-                        <li>Alternative supplier identification for risk mitigation</li>
-                    </ul>
-
-                    <h3>Sourcing Advantages:</h3>
-                    <ul>
-                        <li>Access to India's manufacturing advantage</li>
-                        <li>Cost savings of 30-60% vs international sourcing</li>
-                        <li>Verified supplier network across multiple industries</li>
-                        <li>Sustainable and ethical sourcing options</li>
-                    </ul>
-                `
-            },
-            account: {
-                title: 'Dedicated Account Management',
-                content: `
-                    <p>Navigating marketplace accounts can be overwhelming. We manage every step—from application to approval, compliance to growth—so you can focus on your business.</p>
-                    
-                    <h3>Account Management Services:</h3>
-                    <ul>
-                        <li>Marketplace account application and approval assistance</li>
-                        <li>Complete profile setup and optimization</li>
-                        <li>Product listing and catalog management</li>
-                        <li>Compliance checks and policy adherence</li>
-                        <li>Brand approval and trademark registration</li>
-                        <li>IP case handling and dispute resolution</li>
-                        <li>Account health monitoring and violation prevention</li>
-                        <li>Performance metrics tracking and reporting</li>
-                    </ul>
-
-                    <h3>Why Full Management:</h3>
-                    <ul>
-                        <li>Stay violation-free with proactive monitoring</li>
-                        <li>Maximize account potential with expert optimization</li>
-                        <li>Handle complex issues with dedicated support</li>
-                        <li>Scale faster without operational headaches</li>
-                    </ul>
-                `
-            },
-            shopify: {
-                title: 'Shopify Store Development',
-                content: `
-                    <p>Build visually stunning, high-converting Shopify stores optimized for sales and performance. Whether launching new or upgrading existing stores, we create revenue-generating platforms.</p>
-                    
-                    <h3>Shopify Services:</h3>
-                    <ul>
-                        <li>Custom theme development and design</li>
-                        <li>Mobile-responsive store optimization</li>
-                        <li>SEO optimization for higher rankings</li>
-                        <li>App integration (payments, shipping, marketing)</li>
-                        <li>Product catalog setup and organization</li>
-                        <li>Checkout optimization for higher conversions</li>
-                        <li>Performance optimization (speed, loading times)</li>
-                        <li>Brand identity and user experience design</li>
-                    </ul>
-
-                    <h3>Store Features:</h3>
-                    <ul>
-                        <li>Seamless navigation and user-friendly interface</li>
-                        <li>High-converting landing pages</li>
-                        <li>Integrated marketing tools and analytics</li>
-                        <li>Multi-currency and international shipping support</li>
-                    </ul>
-                `
-            },
-            commission: {
-                title: 'Commission Optimization Strategies',
-                content: `
-                    <p>Marketplace fees can eat into your profits significantly. We develop strategic pricing and operational models to minimize commission impact while staying competitive.</p>
-                    
-                    <h3>Commission Reduction Tactics:</h3>
-                    <ul>
-                        <li>Strategic pricing models that account for marketplace fees</li>
-                        <li>Bundle optimization to maximize per-order value</li>
-                        <li>Fulfillment method selection (FBA vs FBM vs Hybrid)</li>
-                        <li>Category selection for lower commission rates</li>
-                        <li>Volume-based fee negotiation strategies</li>
-                        <li>Profit margin analysis and optimization</li>
-                        <li>Multi-marketplace arbitrage opportunities</li>
-                        <li>Cost structure optimization across the supply chain</li>
-                    </ul>
-
-                    <h3>Results We Deliver:</h3>
-                    <ul>
-                        <li>Reduce effective commission rates by 15-30%</li>
-                        <li>Improve profit margins without price increases</li>
-                        <li>Maintain competitiveness while maximizing profitability</li>
-                        <li>Data-driven decisions for long-term sustainability</li>
-                    </ul>
-                `
-            },
-            buybox: {
-                title: 'Buybox Winning Strategy',
-                content: `
-                    <p>The buybox drives 80%+ of sales on major marketplaces. We implement data-driven strategies to win and maintain buybox ownership consistently.</p>
-                    
-                    <h3>Buybox Optimization:</h3>
-                    <ul>
-                        <li>Competitive pricing analysis and dynamic repricing</li>
-                        <li>Inventory management for consistent availability</li>
-                        <li>Fulfillment method optimization (Prime eligibility)</li>
-                        <li>Seller metrics improvement (ODR, cancellation rate, delivery time)</li>
-                        <li>Product condition and listing quality enhancement</li>
-                        <li>Order defect rate minimization strategies</li>
-                        <li>Customer service excellence for high ratings</li>
-                        <li>Real-time monitoring and automated adjustments</li>
-                    </ul>
-
-                    <h3>Buybox Impact:</h3>
-                    <ul>
-                        <li>Increase sales by 300-500% with buybox ownership</li>
-                        <li>Maintain competitive edge without race-to-bottom pricing</li>
-                        <li>Algorithmic favorability for long-term success</li>
-                        <li>Protect against competitor price wars</li>
-                    </ul>
-                `
-            },
-            competition: {
-                title: 'Competitor Intelligence & Analysis',
-                content: `
-                    <p>Beat your competition with real-time monitoring, market intelligence, and strategic insights. We track competitors so you can stay ahead.</p>
-                    
-                    <h3>Competitive Analysis Services:</h3>
-                    <ul>
-                        <li>Real-time price tracking and alerts</li>
-                        <li>Keyword gap analysis and opportunities</li>
-                        <li>Product review analysis and sentiment tracking</li>
-                        <li>Advertising strategy reconnaissance</li>
-                        <li>Inventory level monitoring</li>
-                        <li>Market share analysis by category</li>
-                        <li>Listing optimization benchmarking</li>
-                        <li>New entrant and threat identification</li>
-                    </ul>
-
-                    <h3>Strategic Advantages:</h3>
-                    <ul>
-                        <li>Identify untapped keyword opportunities</li>
-                        <li>React quickly to competitor price changes</li>
-                        <li>Discover product gaps in the market</li>
-                        <li>Optimize advertising spend vs competitors</li>
-                    </ul>
-                `
+        // E-commerce Flow Animation
+        function createEcommerceFlow() {
+            const flow = document.getElementById('ecommerceFlow');
+            const icons = ['🛒', '📦', '🚚', '💳', '⭐', '📊', '🏪', '🌐', '💰', '📈'];
+            
+            // Create flowing icons
+            for (let i = 0; i < 15; i++) {
+                const icon = document.createElement('div');
+                icon.className = 'flow-icon';
+                icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+                icon.style.left = Math.random() * 100 + '%';
+                icon.style.top = Math.random() * 100 + '%';
+                icon.style.animationDelay = Math.random() * 20 + 's';
+                icon.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                flow.appendChild(icon);
             }
-        };
 
-        // ===== BLOG DATA =====
-        const blogData = {
-            'export-us': {
-                title: 'How to Start E-commerce in India and Export to the US',
-                content: `
-                    <p>Breaking into US markets from India might seem daunting, but with the right strategy and partners, it's more accessible than ever. This comprehensive guide covers everything you need to know.</p>
-
-                    <h3>1. Product Selection for US Markets</h3>
-                    <ul>
-                        <li>Research high-demand, low-competition niches using tools like Jungle Scout</li>
-                        <li>Validate product-market fit with US consumer preferences</li>
-                        <li>Consider shipping costs, dimensions, and customs classifications</li>
-                        <li>Ensure products comply with US safety standards (FDA, FCC, CPSC)</li>
-                        <li>Analyze profit margins after accounting for all costs and fees</li>
-                    </ul>
-
-                    <h3>2. Legal & Compliance Requirements</h3>
-                    <ul>
-                        <li>Register your Indian business entity (LLP, Pvt Ltd recommended)</li>
-                        <li>Obtain IEC (Import Export Code) from DGFT</li>
-                        <li>Understand FDA regulations for food, cosmetics, medical devices</li>
-                        <li>FCC compliance for electronics and radio frequency devices</li>
-                        <li>Product liability insurance for US sales</li>
-                        <li>Trademark registration in the US (highly recommended)</li>
-                    </ul>
-
-                    <h3>3. Shipping & Logistics Solutions</h3>
-                    <ul>
-                        <li><strong>DDP (Delivered Duty Paid):</strong> You handle customs, easier for customers</li>
-                        <li><strong>DDU (Delivered Duty Unpaid):</strong> Customer pays customs, lower upfront cost</li>
-                        <li>Amazon FBA USA: Ship inventory in bulk, Amazon handles fulfillment</li>
-                        <li>3PL partners in the US for storage and distribution</li>
-                        <li>Direct shipping via DHL, FedEx for smaller volumes</li>
-                        <li>Consider freight forwarders for cost-effective bulk shipping</li>
-                    </ul>
-
-                    <h3>4. Marketplace Selection</h3>
-                    <ul>
-                        <li><strong>Amazon.com:</strong> Largest reach, competitive, requires FBA for Prime</li>
-                        <li><strong>Walmart.com:</strong> Growing fast, less competition, strict quality standards</li>
-                        <li><strong>eBay:</strong> Good for testing products, auction + fixed price options</li>
-                        <li><strong>Etsy:</strong> Perfect for handmade, vintage, unique Indian products</li>
-                        <li><strong>TikTok Shop:</strong> Emerging platform, viral potential, younger demographics</li>
-                    </ul>
-
-                    <h3>5. Payment Gateway Setup</h3>
-                    <ul>
-                        <li>Payoneer: Popular for international sellers, receive marketplace payments</li>
-                        <li>Wise (formerly TransferWise): Low fees for currency conversion</li>
-                        <li>Indian bank accounts with SWIFT capabilities</li>
-                        <li>Consider US LLC formation for easier payment processing</li>
-                    </ul>
-
-                    <h3>6. Pricing Strategy</h3>
-                    <ul>
-                        <li>Calculate all costs: product, shipping, customs, marketplace fees (15-20%)</li>
-                        <li>Research competitor pricing on target marketplaces</li>
-                        <li>Factor in currency fluctuations (INR to USD)</li>
-                        <li>Account for returns and refunds (typically 5-10% of sales)</li>
-                        <li>Aim for 30-40% profit margin minimum</li>
-                    </ul>
-
-                    <h3>7. Marketing for US Customers</h3>
-                    <ul>
-                        <li>Optimize product listings for US search terms and language</li>
-                        <li>Professional product photography with lifestyle images</li>
-                        <li>Emphasize "Made in India" as a unique selling point</li>
-                        <li>Run PPC campaigns targeting US time zones</li>
-                        <li>Leverage social proof: reviews, testimonials, influencer partnerships</li>
-                    </ul>
-
-                    <h3>8. Common Pitfalls to Avoid</h3>
-                    <ul>
-                        <li>Underestimating shipping times (promise 2-3 weeks, deliver in 1)</li>
-                        <li>Ignoring US customer service expectations (fast responses required)</li>
-                        <li>Not testing products before bulk ordering</li>
-                        <li>Failing to protect intellectual property in the US</li>
-                    </ul>
-
-                    <p><strong>Bottom Line:</strong> Success in US markets requires patience, compliance, and local understanding. Partner with experts who know both Indian sourcing and US marketplace dynamics.</p>
-                `
-            },
-            sourcing: {
-                title: 'Is Product Sourcing Tough in 2025?',
-                content: `
-                    <p>The sourcing landscape has evolved dramatically. While platforms like IndiaMART and TradeIndia have made supplier discovery easier, quality verification and relationship building remain challenging.</p>
-
-                    <h3>The Modern Sourcing Reality</h3>
-                    <ul>
-                        <li><strong>Information Overload:</strong> Thousands of suppliers, but which are reliable?</li>
-                        <li><strong>Quality Variance:</strong> Samples are perfect, bulk orders disappoint</li>
-                        <li><strong>MOQ Challenges:</strong> Minimum order quantities too high for testing</li>
-                        <li><strong>Communication Gaps:</strong> Misunderstandings lead to wrong products</li>
-                        <li><strong>Payment Risks:</strong> Advance payments without guarantees</li>
-                    </ul>
-
-                    <h3>Smart Sourcing Strategies for 2025</h3>
-                    <ul>
-                        <li><strong>Start Small:</strong> Negotiate sample + small batch before committing</li>
-                        <li><strong>Factory Visits:</strong> Essential for high-value partnerships (virtual tours work too)</li>
-                        <li><strong>Multiple Quotes:</strong> Get 5-7 quotes, compare not just price but capabilities</li>
-                        <li><strong>Quality Protocols:</strong> Define specifications in writing, use inspection services</li>
-                        <li><strong>Payment Terms:</strong> 30% advance, 70% on delivery after inspection</li>
-                        <li><strong>Backup Suppliers:</strong> Always have 2-3 alternatives to avoid stockouts</li>
-                    </ul>
-
-                    <h3>Red Flags to Watch For</h3>
-                    <ul>
-                        <li>Supplier refuses factory visit or video call</li>
-                        <li>Demands 100% payment upfront</li>
-                        <li>No company registration documents or GST number</li>
-                        <li>Generic product photos (likely a middleman)</li>
-                        <li>Unwilling to provide references or past client contacts</li>
-                        <li>Price is 50%+ lower than market average (too good to be true)</li>
-                    </ul>
-
-                    <h3>Best Sourcing Platforms in India</h3>
-                    <ul>
-                        <li><strong>IndiaMART:</strong> Largest B2B marketplace, verify "TrustSEAL" badges</li>
-                        <li><strong>TradeIndia:</strong> Good for exports, strong verification process</li>
-                        <li><strong>ExportersIndia:</strong> Focus on export-ready manufacturers</li>
-                        <li><strong>Made-in-India:</strong> Government-backed supplier directory</li>
-                        <li><strong>Alibaba India:</strong> International standards, higher quality suppliers</li>
-                    </ul>
-
-                    <h3>Building Long-Term Supplier Relationships</h3>
-                    <ul>
-                        <li>Pay on time, every time—builds trust and gets priority treatment</li>
-                        <li>Provide feedback constructively to improve quality</li>
-                        <li>Share your growth plans so they can scale with you</li>
-                        <li>Visit suppliers during festivals (relationship building)</li>
-                        <li>Negotiate volume discounts as orders increase</li>
-                        <li>Consider exclusive arrangements for unique products</li>
-                    </ul>
-
-                    <h3>Quality Control Checklist</h3>
-                    <ul>
-                        <li>Pre-production samples approved before bulk manufacturing</li>
-                        <li>During-production inspection (DUPRO) at 50% completion</li>
-                        <li>Pre-shipment inspection (PSI) before dispatch</li>
-                        <li>Use third-party inspection services (SGS, Bureau Veritas, etc.)</li>
-                        <li>Define acceptance criteria: dimensions, materials, functionality</li>
-                        <li>Document everything with photos and reports</li>
-                    </ul>
-
-                    <p><strong>Conclusion:</strong> Sourcing isn't tough if you follow proven processes. The key is patience, due diligence, and building relationships beyond just transactions.</p>
-                `
-            },
-            logistics: {
-                title: 'Easy Logistics: Is It Really a Myth?',
-                content: `
-                    <p>"Easy logistics" is one of the biggest misconceptions in e-commerce. The reality involves complex coordination between warehousing, delivery, returns, and customer expectations.</p>
-
-                    <h3>The Logistics Challenge in India</h3>
-                    <ul>
-                        <li><strong>Last-Mile Complexity:</strong> Reaching tier-2 and tier-3 cities</li>
-                        <li><strong>Address Accuracy:</strong> Incomplete or wrong addresses cause 30% delivery failures</li>
-                        <li><strong>Cash on Delivery:</strong> 70% prefer COD, increasing complexity and fraud</li>
-                        <li><strong>Returns Management:</strong> 15-25% return rates in fashion/electronics</li>
-                        <li><strong>Peak Season Chaos:</strong> Diwali, Republic Day sales overwhelm systems</li>
-                        <li><strong>Cost Pressures:</strong> Free/low-cost shipping expected by customers</li>
-                    </ul>
-
-                    <h3>3PL vs In-House: The Real Comparison</h3>
-                    <p><strong>Third-Party Logistics (3PL):</strong></p>
-                    <ul>
-                        <li><em>Pros:</em> No upfront investment, scalable, multi-city presence, tech-enabled</li>
-                        <li><em>Cons:</em> Per-order costs higher, less control, shared resources during peak</li>
-                        <li><em>Best For:</em> Startups, seasonal businesses, rapid scaling</li>
-                        <li><em>Top Partners:</em> Delhivery, Ecom Express, Xpressbees, Shiprocket</li>
-                    </ul>
-
-                    <p><strong>In-House Logistics:</strong></p>
-                    <ul>
-                        <li><em>Pros:</em> Complete control, better margins at scale, brand experience</li>
-                        <li><em>Cons:</em> High capital investment, complex operations, limited reach</li>
-                        <li><em>Best For:</em> High-volume sellers (1000+ orders/day), premium brands</li>
-                        <li><em>Break-even:</em> Usually at 50,000+ orders/month</li>
-                    </ul>
-
-                    <h3>Hidden Logistics Costs</h3>
-                    <ul>
-                        <li>Weight disputes and dimensional weight charges</li>
-                        <li>RTO (Return to Origin) charges: 2x shipping cost</li>
-                        <li>COD charges: ₹15-30 per order</li>
-                        <li>Fuel surcharges during price hikes</li>
-                        <li>Failed delivery attempts</li>
-                        <li>Packaging materials and quality</li>
-                        <li>Insurance for high-value items</li>
-                        <li>Storage fees for unsold inventory</li>
-                    </ul>
-
-                    <h3>Solutions That Actually Work</h3>
-                    <ul>
-                        <li><strong>Multi-Carrier Strategy:</strong> Use 2-3 partners, route based on pin codes</li>
-                        <li><strong>Address Verification:</strong> Call customers before dispatch to confirm</li>
-                        <li><strong>Reduce COD:</strong> Offer prepaid discounts (10% off works)</li>
-                        <li><strong>Strategic Warehousing:</strong> Place inventory near demand centers</li>
-                        <li><strong>Smart Packaging:</strong> Right-size boxes to avoid dimensional weight penalties</li>
-                        <li><strong>Predictive Analytics:</strong> Forecast demand to pre-position inventory</li>
-                        <li><strong>Quality Control:</strong> Reduce returns through better QC</li>
-                    </ul>
-
-                    <h3>Quick Commerce (10-15 min delivery)</h3>
-                    <ul>
-                        <li>Requires dark stores in every micro-market</li>
-                        <li>Works for groceries, medicines, not most products</li>
-                        <li>Extremely expensive to operate (₹150-200 per order cost)</li>
-                        <li>Only viable with high order density and frequency</li>
-                        <li><em>Reality:</em> Most sellers should aim for same-day or next-day, not 10-min</li>
-                    </ul>
-
-                    <h3>Marketplace-Specific Fulfillment</h3>
-                    <ul>
-                        <li><strong>Amazon FBA:</strong> Great reach, Prime badge, but 20-30% fees</li>
-                        <li><strong>Flipkart F-Assured:</strong> Similar to FBA, required for visibility</li>
-                        <li><strong>Meesho:</strong> Supports drop-shipping, lower logistics burden</li>
-                        <li><strong>Quick Commerce:</strong> Blinkit/Zepto have their own dark stores</li>
-                    </ul>
-
-                    <h3>Technology for Logistics Excellence</h3>
-                    <ul>
-                        <li>Order Management System (OMS) to sync multi-channel orders</li>
-                        <li>Warehouse Management System (WMS) for inventory tracking</li>
-                        <li>Shipping aggregators (Shiprocket, Shipway) for multi-carrier access</li>
-                        <li>Real-time tracking and customer notifications</li>
-                        <li>Returns management portals</li>
-                        <li>Analytics for route optimization and carrier performance</li>
-                    </ul>
-
-                    <h3>The Bottom Line</h3>
-                    <p>Logistics is never "easy," but it's manageable with the right strategy:</p>
-                    <ul>
-                        <li>Start with 3PL, build scale, then consider in-house</li>
-                        <li>Focus on reducing returns and RTO rates</li>
-                        <li>Use technology to automate and optimize</li>
-                        <li>Build relationships with logistics partners</li>
-                        <li>Set realistic delivery promises and exceed them</li>
-                    </ul>
-
-                    <p><strong>Remember:</strong> Great logistics is invisible to customers—they just expect their orders to arrive on time. That's where expert partners make the difference.</p>
-                `
-            }
-        };
-
-        // ===== BFCM FUNCTIONS =====
-        
-        // Close BFCM Banner
-        function closeBFCMBanner() {
-            document.getElementById('bfcmBanner').classList.add('hidden');
-            localStorage.setItem('bfcmBannerClosed', 'true');
-        }
-
-        // Show BFCM Banner if not closed
-        window.addEventListener('load', () => {
-            const bannerClosed = localStorage.getItem('bfcmBannerClosed');
-            if (bannerClosed !== 'true') {
-                document.getElementById('bfcmBanner').classList.remove('hidden');
-            }
-        });
-
-        // BFCM Popup Functions
-        function openBFCMPopup() {
-            document.getElementById('bfcmPopup').classList.add('active');
-            document.body.style.overflow = 'hidden';
-            localStorage.setItem('bfcmPopupShown', 'true');
-        }
-
-        function closeBFCMPopup() {
-            document.getElementById('bfcmPopup').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Show popup on page load (every time page loads)
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                openBFCMPopup();
-            }, 2000); // Show after 2 seconds
-        });
-
-        // Close popup on outside click
-        document.getElementById('bfcmPopup').addEventListener('click', (e) => {
-            if (e.target.id === 'bfcmPopup') {
-                closeBFCMPopup();
-            }
-        });
-
-        // BFCM Countdown Timer (30 days from now)
-        function updateTimer() {
-            // Calculate 30 days from current date
-            const now = new Date().getTime();
-            const endDate = now + (30 * 24 * 60 * 60 * 1000); // 30 days in milliseconds
-            const distance = endDate - now;
-
-            if (distance > 0) {
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-            } else {
-                document.getElementById('bfcmTimer').innerHTML = '<p style="font-weight: 700; color: var(--dark);">Offer Ended!</p>';
+            // Create connection lines
+            for (let i = 0; i < 8; i++) {
+                const line = document.createElement('div');
+                line.className = 'flow-line';
+                line.style.width = Math.random() * 300 + 100 + 'px';
+                line.style.left = Math.random() * 80 + '%';
+                line.style.top = Math.random() * 80 + '%';
+                line.style.transform = `rotate(${Math.random() * 360}deg)`;
+                line.style.animationDelay = Math.random() * 15 + 's';
+                flow.appendChild(line);
             }
         }
 
-        // Update timer every second
-        setInterval(updateTimer, 1000);
-        updateTimer();
+        // Marketplace logos data
+        const marketplaces = [
+            { name: 'Amazon', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="%23FF9900">amazon</text><path d="M120 40 Q140 45 160 40" stroke="%23FF9900" stroke-width="3" fill="none"/></svg>' },
+            { name: 'Walmart', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="35" font-family="Arial" font-size="20" font-weight="bold" fill="%230071CE">Walmart</text><circle cx="170" cy="25" r="3" fill="%23FFC220"/><circle cx="175" cy="20" r="3" fill="%23FFC220"/><circle cx="180" cy="25" r="3" fill="%23FFC220"/><circle cx="175" cy="30" r="3" fill="%23FFC220"/></svg>' },
+            { name: 'Flipkart', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="38" font-family="Arial" font-size="22" font-weight="bold" fill="%232874F0">Flipkart</text><rect x="150" y="15" width="30" height="30" fill="%23FFD700" rx="5"/></svg>' },
+            { name: 'Meesho', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="40" font-family="Arial" font-size="28" font-weight="bold" fill="%23FF6B9D">m</text><text x="50" y="40" font-family="Arial" font-size="20" fill="%23FF6B9D">eesho</text></svg>' },
+            { name: 'Blinkit', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="35" font-family="Arial" font-size="22" font-weight="bold" fill="%23000">blinkit</text><text x="135" y="35" font-family="Arial" font-size="22" font-weight="bold" fill="%2384C225">+</text></svg>' },
+            { name: 'Zepto', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="38" font-family="Arial" font-size="26" font-weight="bold" fill="%238B4EE8">zepto</text></svg>' },
+            { name: 'Myntra', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="38" font-family="Arial" font-size="24" font-weight="bold" fill="%23FF3E6C">Myntra</text></svg>' },
+            { name: 'Ajio', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="38" font-family="Arial" font-size="26" font-weight="bold" fill="%23282C3F">AJIO</text></svg>' },
+            { name: 'Nykaa', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="38" font-family="Arial" font-size="24" font-weight="bold" fill="%23FC2779">Nykaa</text></svg>' },
+            { name: 'TikTok Shop', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="35" font-family="Arial" font-size="20" font-weight="bold" fill="%23000">TikTok Shop</text></svg>' },
+            { name: 'Shopify', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="38" font-family="Arial" font-size="24" font-weight="bold" fill="%2396BF48">shopify</text></svg>' },
+            { name: 'eBay', logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"><text x="10" y="38" font-family="Arial" font-size="26" font-weight="bold"><tspan fill="%23E53238">e</tspan><tspan fill="%230064D2">B</tspan><tspan fill="%23F5AF02">a</tspan><tspan fill="%2386B817">y</tspan></text></svg>' }
+        ];
 
-        // ===== MOBILE MENU =====
+        function createLogo(marketplace) {
+            const logo = document.createElement('div');
+            logo.className = 'marketplace-logo';
+            logo.innerHTML = `<img src="${marketplace.logo}" alt="${marketplace.name}" style="max-width: 160px; max-height: 70px; object-fit: contain;">`;
+            return logo;
+        }
+
+        // Initialize slider
+        const sliderTrack = document.getElementById('sliderTrack');
+        if (sliderTrack) {
+            // Create two sets for infinite loop
+            for (let i = 0; i < 2; i++) {
+                marketplaces.forEach(marketplace => {
+                    sliderTrack.appendChild(createLogo(marketplace));
+                });
+            }
+        }
+
+        // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -2596,21 +1343,7 @@
             });
         });
 
-        // ===== SMOOTH SCROLL =====
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // ===== NAVBAR SCROLL =====
+        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             const scrollTop = document.getElementById('scrollTop');
@@ -2628,239 +1361,34 @@
             }
         });
 
-        // ===== MARKETPLACE LOGOS =====
-        const marketplaces = [
-            { name: 'Amazon', color: '#FF9900' },
-            { name: 'Walmart', color: '#0071CE' },
-            { name: 'Flipkart', color: '#2874F0' },
-            { name: 'Meesho', color: '#9F2089' },
-            { name: 'Blinkit', color: '#F8CB46' },
-            { name: 'Zepto', color: '#8B4EE8' },
-            { name: 'Instamart', color: '#E23744' },
-            { name: 'Myntra', color: '#EE5F73' },
-            { name: 'Ajio', color: '#C4181C' },
-            { name: 'Nykaa', color: '#FC2779' },
-            { name: 'BigBasket', color: '#84C225' },
-            { name: 'JioMart', color: '#0A2885' },
-            { name: 'Snapdeal', color: '#E40046' },
-            { name: 'Shopsy', color: '#FF6B00' },
-            { name: 'eBay', color: '#E53238' },
-            { name: 'Etsy', color: '#F56400' },
-            { name: 'Shein', color: '#000000' },
-            { name: 'TikTok Shop', color: '#FF0050' },
-            { name: 'Amazon US', color: '#FF9900' },
-            { name: 'Amazon UK', color: '#FF9900' }
-        ];
-
-        function createLogo(marketplace) {
-            const logo = document.createElement('div');
-            logo.className = 'marketplace-logo';
-            logo.innerHTML = `
-                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-                    <text x="100" y="50" text-anchor="middle" fill="${marketplace.color}" 
-                          font-size="22" font-weight="bold" font-family="Arial, sans-serif">
-                        ${marketplace.name}
-                    </text>
-                </svg>
-            `;
-            return logo;
-        }
-
-        // Initialize slider
-        const sliderTrack = document.getElementById('sliderTrack');
-        if (sliderTrack) {
-            // Create two sets for infinite loop
-            for (let i = 0; i < 2; i++) {
-                marketplaces.forEach(marketplace => {
-                    sliderTrack.appendChild(createLogo(marketplace));
-                });
-            }
-        }
-
-        // ===== SERVICE MODALS =====
-        function openServiceModal(service) {
-            const modal = document.getElementById('serviceModal');
-            const title = document.getElementById('modalTitle');
-            const body = document.getElementById('modalBody');
-            
-            const data = serviceData[service];
-            if (data) {
-                title.textContent = data.title;
-                body.innerHTML = data.content;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('serviceModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Service card click handlers
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const service = card.getAttribute('data-service');
-                openServiceModal(service);
-            });
-        });
-
-        // Close modal on outside click
-        document.getElementById('serviceModal').addEventListener('click', (e) => {
-            if (e.target.id === 'serviceModal') {
-                closeModal();
-            }
-        });
-
-        // ===== BLOG SLIDER =====
-        const blogPosts = [
-            {
-                icon: '🌏',
-                date: 'October 25, 2025',
-                title: 'How to Start E-commerce in India and Export to the US',
-                excerpt: 'Breaking into US markets from India seems daunting, but it\'s more accessible than ever. Learn product selection, compliance, shipping solutions, and marketplace strategies.',
-                url: 'https://e-scalability.com/blogs/how-to-start-ecommerce-india-export-us.html',
-                gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-            },
-            {
-                icon: '📦',
-                date: 'October 20, 2025',
-                title: 'Is Product Sourcing Tough in 2025?',
-                excerpt: 'The sourcing landscape has evolved. Explore modern strategies, quality verification, MOQ negotiations, and building supplier partnerships that scale.',
-                url: 'https://e-scalability.com/blogs/product-sourcing-2025.html',
-                gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
-            },
-            {
-                icon: '🚚',
-                date: 'October 15, 2025',
-                title: 'Easy Logistics: Is It Really a Myth?',
-                excerpt: 'Explore the real challenges of Indian logistics, 3PL vs in-house operations, and solutions that actually work for businesses at different scales.',
-                url: 'https://e-scalability.com/blogs/easy-logistics-myth.html',
-                gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
-            },
-            {
-                icon: '🎯',
-                date: 'October 10, 2025',
-                title: 'Winning the Amazon Buybox in 2025',
-                excerpt: 'Master the strategies to win and maintain Amazon buybox ownership. Learn about pricing, fulfillment, metrics, and competitive tactics.',
-                url: 'https://e-scalability.com/blogs/amazon-buybox-strategy.html',
-                gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
-            },
-            {
-                icon: '💰',
-                date: 'October 5, 2025',
-                title: 'How to Reduce Marketplace Commission Fees',
-                excerpt: 'Strategic approaches to minimize marketplace fees while staying competitive. Pricing models, bundling, and operational optimization techniques.',
-                url: 'https://e-scalability.com/blogs/reduce-marketplace-fees.html',
-                gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
-            }
-        ];
-
-        let currentSlide = 0;
-
-        function renderBlogSlider() {
-            const slider = document.getElementById('blogSlider');
-            slider.innerHTML = blogPosts.map((blog, index) => `
-                <div class="blog-slide">
-                    <article class="blog-card" onclick="window.open('${blog.url}', '_blank')">
-                        <div class="blog-image" style="background: ${blog.gradient}">
-                            ${blog.icon}
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-date">${blog.date}</span>
-                            <h3>${blog.title}</h3>
-                            <p class="blog-excerpt">${blog.excerpt}</p>
-                            <a href="${blog.url}" target="_blank" class="read-more" onclick="event.stopPropagation()">Read Full Guide →</a>
-                        </div>
-                    </article>
-                </div>
-            `).join('');
-        }
-
-        function slideBlogs(direction) {
-            const slider = document.getElementById('blogSlider');
-            const slideWidth = 370; // 350px card + 20px gap
-            const maxScroll = slider.scrollWidth - slider.clientWidth;
-            
-            let newScroll = slider.scrollLeft + (direction * slideWidth);
-            
-            if (newScroll < 0) newScroll = 0;
-            if (newScroll > maxScroll) newScroll = maxScroll;
-            
-            slider.scrollTo({
-                left: newScroll,
-                behavior: 'smooth'
-            });
-        }
-
-        // Auto-play slider
-        let autoSlideInterval;
-        
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                const slider = document.getElementById('blogSlider');
-                const maxScroll = slider.scrollWidth - slider.clientWidth;
-                
-                if (slider.scrollLeft >= maxScroll) {
-                    slider.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    slideBlogs(1);
-                }
-            }, 5000); // Slide every 5 seconds
-        }
-
-        function stopAutoSlide() {
-            clearInterval(autoSlideInterval);
-        }
-
-        // Initialize blog slider
-        document.addEventListener('DOMContentLoaded', () => {
-            renderBlogSlider();
-            startAutoSlide();
-            
-            // Pause auto-slide on hover
-            const slider = document.getElementById('blogSlider');
-            slider.addEventListener('mouseenter', stopAutoSlide);
-            slider.addEventListener('mouseleave', startAutoSlide);
-        });
-
-        // ===== BLOG MODALS (Removed - blogs now open in new pages) =====
-        // Blog modal functionality removed as blogs are now separate pages
-        
-        // Keep old blog data for reference if needed
-        const blogDetailData = blogData; // Store for potential future use
-
-        // Close modals with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-                closeBFCMPopup();
-            }
-        });
-
-        // ===== CONTACT FORM =====
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const name = formData.get('name') || e.target[0].value;
-            const email = formData.get('email') || e.target[1].value;
-            
-            // Show success message
-            alert('🎉 Thank you for reaching out! We will get back to you within 24 hours.\n\n💡 Don\'t forget to book your FREE BFCM Audit Call!');
-            
-            // Redirect to calendar after short delay
-            setTimeout(() => {
-                window.open('https://calendar.app.google/difympEjXkJVUMqV6', '_blank');
-            }, 1000);
-            
-            e.target.reset();
-        });
-
-        // ===== SCROLL TO TOP =====
+        // Scroll to top
         document.getElementById('scrollTop').addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('🎉 Thank you for reaching out! We will get back to you within 24 hours.');
+            e.target.reset();
+        });
+
+        // Initialize animations
+        createEcommerceFlow();
     </script>
 </body>
 </html>
