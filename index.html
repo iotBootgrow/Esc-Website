@@ -2629,40 +2629,28 @@
 
         // ===== MARKETPLACE LOGOS =====
         const marketplaces = [
-            { name: 'Amazon', color: '#FF9900' },
-            { name: 'Walmart', color: '#0071CE' },
-            { name: 'Flipkart', color: '#2874F0' },
-            { name: 'Meesho', color: '#9F2089' },
-            { name: 'Blinkit', color: '#F8CB46' },
-            { name: 'Zepto', color: '#8B4EE8' },
-            { name: 'Instamart', color: '#E23744' },
-            { name: 'Myntra', color: '#EE5F73' },
-            { name: 'Ajio', color: '#C4181C' },
-            { name: 'Nykaa', color: '#FC2779' },
-            { name: 'BigBasket', color: '#84C225' },
-            { name: 'JioMart', color: '#0A2885' },
-            { name: 'Snapdeal', color: '#E40046' },
-            { name: 'Shopsy', color: '#FF6B00' },
-            { name: 'eBay', color: '#E53238' },
-            { name: 'Etsy', color: '#F56400' },
-            { name: 'Shein', color: '#000000' },
-            { name: 'TikTok Shop', color: '#FF0050' },
-            { name: 'Amazon US', color: '#FF9900' },
-            { name: 'Amazon UK', color: '#FF9900' }
+            "amazon.png",
+  "walmart.png",
+  "flipkart.png",
+  "meesho.webp",
+  "Blinkit.png",
+  "zepto.svg.png",
+  "Myntra.png",
+  "Ajio.png",
+  "nykaa.webp",
+  "Tiktokshop.jpg",
+  "Shopify.png",
+  "ebay.png"
         ];
 
-        function createLogo(marketplace) {
+        function createLogo(image) {
             const logo = document.createElement('div');
-            logo.className = 'marketplace-logo';
-            logo.innerHTML = `
-                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-                    <text x="100" y="50" text-anchor="middle" fill="${marketplace.color}" 
-                          font-size="22" font-weight="bold" font-family="Arial, sans-serif">
-                        ${marketplace.name}
-                    </text>
-                </svg>
-            `;
-            return logo;
+    logo.className = 'marketplace-logo';
+    logo.innerHTML = `
+        <img src="https://raw.githubusercontent.com/iotBootgrow/Esc-Website/main/${image}"
+             style="max-width:150px; max-height:80px; object-fit:contain;">
+    `;
+    return logo;
         }
 
         // Initialize slider
